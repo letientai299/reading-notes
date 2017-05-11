@@ -1,0 +1,372 @@
+- [X] Preface:
+  - Shit. 20 chaps!
+  - Eight major parts? Kidding me. Only 7 (that the first in the Errata)
+- [X] Contents
+
+
+= Part 1: Overview =
+
+- [X] Chapter 1: Introduction:
+  - [X] What Operating System do
+  - [X] Computer-System Organization:
+    - IO:
+      - Store data in the Local buffer
+      - Device Controller and special purpose register.
+      - Interrupt the CPU when the IO is done.
+      - DMA: Direct memory access.
+      - Switch values bus?
+  - [X] Computer-System Architecture
+    - [X] Single processor
+    - [X] Multiprocessor:
+      - Core vs chip?
+  - [X] Operating System Structure
+  - [X] Operating System Operations:
+    - Trap vs interrupt?
+    - [X] Dual-mode and Multimode operation
+    - [X] Timer
+  - [X] Process Management
+  - [X] Memory Management
+  - [X] Storage Management
+  - [X] Protection and Security
+  - [X] Kernel Data Structures
+  - [X] Computing Environments
+  - [X] Open-source Operating Systems
+  - [X] Summary
+
+
+- [X] Chapter 2: Operating System Structures
+  - [X] 2.1 Operating System services
+  - [X] 2.2 User and Operating System interface
+  - [X] 2.3 System calls
+  - [X] 2.4 Type of System Calls:
+    - Fig 2.8 misses sys calls for Protection
+    - [X] 2.4.1 Process control:
+      - MS-DOS is single tasking.
+    - [X] 2.4.2 File Management
+    - [X] 2.4.3 Device Management
+    - [X] 2.4.4 Information Maintenance
+    - [X] 2.4.5 Communication
+    - [X] 2.4.6 Protection
+  - [X] 2.5 System Programs
+  - [X] 2.6 Operating System Design and Implementation:
+    - [X] 2.6.1 Design Goals
+    - [X] 2.6.2 Mechanisms and Policies
+      - Windows and Mac enforce policies and mechanisms, build them in the Kernel to make Look and Feel consistent.
+    - [X] 2.6.3 Implementation
+  - [X] 2.7 Operating System Structure:
+    - [X] 2.7.1 Simple Structure
+    - [X] 2.7.2 Layered Approach
+    - [X] 2.7.3 Microkernels
+      - Require message passing between user-space service
+      - What are the approaches under Window 10 and Linux?
+    - [X] 2.7.4 Modules
+      - Import the service directly into the kernel, avoid message passing.
+      - Answer above question for Linux: the Modules approach
+    - [X] 2.7.5 Hybrid Systems
+  - [X] 2.8 Operating System Debugging
+    - [X] 2.8.1 Failure Analysis
+    - [X] 2.8.2 Performance Tuning
+    - [X] 2.8.3 DTrace
+  - [X] 2.9 Operating System Generation
+  - [X] 2.10 System Boot
+  - [X] 2.11 Summary
+
+
+= Part 2: Process Management =
+
+- [ ] Chapter 3: Processes
+  - [ ] 3.1
+  - [ ] 3.2
+  - [ ] 3.3
+  - [ ] 3.4
+  - [ ] 3.5
+  - [ ] 3.6
+  - [ ] 3.7
+
+
+- [ ] Chapter 4:
+  - [ ] 4.1
+  - [ ] 4.2
+  - [ ] 4.3
+  - [ ] 4.4
+  - [ ] 4.5
+  - [ ] 4.6
+  - [ ] 4.7
+  - [ ] 4.8
+
+
+
+- [ ] Chapter 5:
+  - [ ] 5.1
+  - [ ] 5.2
+  - [ ] 5.3
+  - [ ] 5.4
+  - [ ] 5.5
+  - [ ] 5.6
+  - [ ] 5.7
+  - [ ] 5.8
+  - [ ] 5.9
+  - [ ] 5.10
+  - [ ] 5.11
+
+
+- [ ] Chapter 6:
+  - [ ] 6.1
+  - [ ] 6.2
+  - [ ] 6.3
+  - [ ] 6.4
+  - [ ] 6.5
+  - [ ] 6.6
+  - [ ] 6.7
+  - [ ] 6.8
+  - [ ] 6.9
+
+
+- [ ] Chapter 7:
+  - [ ] 7.1
+  - [ ] 7.2
+  - [ ] 7.3
+  - [ ] 7.4
+  - [ ] 7.5
+  - [ ] 7.6
+  - [ ] 7.7
+  - [ ] 7.8
+
+
+= Part 3: Memory Management =
+
+- [ ] Chapter 8:
+  - [ ] 8.1
+  - [ ] 8.2
+  - [ ] 8.3
+  - [ ] 8.4
+  - [ ] 8.5
+  - [ ] 8.6
+  - [ ] 8.7
+  - [ ] 8.8
+  - [ ] 8.9
+
+
+
+- [ ] Chapter 9:
+  - [ ] 9.1
+  - [ ] 9.2
+  - [ ] 9.3
+  - [ ] 9.4
+  - [ ] 9.5
+  - [ ] 9.6
+  - [ ] 9.7
+  - [ ] 9.8
+  - [ ] 9.9
+  - [ ] 9.10
+  - [ ] 9.11
+
+
+= Part 4: Storage Management =
+
+- [ ] Chapter 10:
+  - [ ] 10.1
+  - [ ] 10.2
+  - [ ] 10.3
+  - [ ] 10.4
+  - [ ] 10.5
+  - [ ] 10.6
+  - [ ] 10.7
+  - [ ] 10.8
+  - [ ] 10.9
+
+
+
+- [ ] Chapter 11:
+  - [ ] 11.1
+  - [ ] 11.2
+  - [ ] 11.3
+  - [ ] 11.4
+  - [ ] 11.5
+  - [ ] 11.6
+  - [ ] 11.7
+
+
+
+- [ ] Chapter 12:
+  - [ ] 12.1
+  - [ ] 12.2
+  - [ ] 12.3
+  - [ ] 12.4
+  - [ ] 12.5
+  - [ ] 12.6
+  - [ ] 12.7
+  - [ ] 12.8
+  - [ ] 12.9
+  - [ ] 12.10
+
+
+
+- [ ] Chapter 13:
+  - [ ] 13.1
+  - [ ] 13.2
+  - [ ] 13.3
+  - [ ] 13.4
+  - [ ] 13.5
+  - [ ] 13.6
+  - [ ] 13.7
+  - [ ] 13.8
+
+
+= Part 5: Protection and Security =
+
+- [ ] Chapter 14:
+  - [ ] 14.1
+  - [ ] 14.2
+  - [ ] 14.3
+  - [ ] 14.4
+  - [ ] 14.5
+  - [ ] 14.6
+  - [ ] 14.7
+  - [ ] 14.8
+  - [ ] 14.9
+  - [ ] 14.10
+
+
+
+- [ ] Chapter 15:
+  - [ ] 15.1
+  - [ ] 15.2
+  - [ ] 15.3
+  - [ ] 15.4
+  - [ ] 15.5
+  - [ ] 15.6
+  - [ ] 15.7
+  - [ ] 15.8
+  - [ ] 15.9
+  - [ ] 15.10
+
+
+
+= Part 6: Advanced Topics =
+
+- [ ] Chapter 16:
+  - [ ] 16.1
+  - [ ] 16.2
+  - [ ] 16.3
+  - [ ] 16.4
+  - [ ] 16.5
+  - [ ] 16.6
+  - [ ] 16.7
+  - [ ] 16.8
+
+
+
+- [ ] Chapter 17:
+  - [ ] 17.1
+  - [ ] 17.2
+  - [ ] 17.3
+  - [ ] 17.4
+  - [ ] 17.5
+  - [ ] 17.6
+  - [ ] 17.7
+  - [ ] 17.8
+  - [ ] 17.9
+  - [ ] 17.10
+
+
+= Part 7: Case Studies =
+
+- [O] Chapter 18: The Linux System
+  - [X] 18.1 Linux History
+    - [X] 18.1.1 The Linux Kernel
+    - [X] 18.1.2 The Linux System
+    - [X] 18.1.3 Linux Distributions
+    - [X] 18.1.4 Linux Licensing
+  - [X] 18.2 Design Principles
+    - [X] 18.2.1 Components of a Linux System
+      - Kernel
+      - `libc`: provides standard C library, user mode and some other system level interfaces
+      - System utilities:
+  - [X] 18.3 Kernel Modules
+    - [X] 18.3.1 Module Management
+    - [X] 18.3.2 Driver Registration:
+      - Device: Character (byte), block and network interface devices.
+    - [X] 18.3.3 Conflict Resolution
+  - [X] 18.4 Process Management:
+      - [X] 18.4.1 The fork() and exec() Process Model
+          - `fork`: duplicate the running process,
+            and 2 process will cntinue from where `fork` is called.
+        - [X] 18.4.1.1 Process Identity
+        - [X] 18.4.1.2 Process Environment
+        - [X] 18.4.1.3 Process Context
+      - [X] 18.4.2 Processes and Threads
+        - Processes created by `clone()` can share resource with parent, whereas ones create by `fokr()` share nothing.
+  - [X] 18.5 Scheduling
+    - [X] 18.5.1 Process Scheduling
+      - Switching cost.
+      - Fairness
+    - [X] 18.5.2 Real-Time Scheduling
+    - [X] 18.5.3 Kernel Synchronization
+    - [X] 18.5.4 Symmetric Multiprocessing
+  - [X] 18.6 Memory Management
+    - [X] 18.6.1 Management of Physical Memory
+    - [X] 18.6.2 Virtual Memory
+    - [X] 18.6.3 Execution and Loading of User Programs
+  - [X] 18.7 File Systems
+    - The book discusses on `ext3`, whereas the current standard is `ext4`.
+    - [X] 18.7.1 The Virtual File System
+    - [X] 18.7.2 The Linux `ext3` File System
+    - [X] 18.7.3 Journaling
+    - [X] 18.7.4 The Linux Process File System
+  - [X] 18.8 Input and Output
+    - [X] 18.8.1 Block devices
+    - [X] 18.8.2 Character devices
+  - [X] 18.9 Interprocess Communication
+    - [X] 18.9.1 Synchronization and Signals
+      - Signal cannot carry any information.
+    - [X] 18.9.2 Passing of Data among Processes
+      - pipe
+      - Shared memory
+  - [X] 18.10 Network Structure
+  - [X] 18.11 Security
+    - [X] 18.11.1 Authentication
+    - [X] 18.11.2 Access Control
+  - [X] 18.12 Summary
+  - [X] Practical Exercises:
+    - [X] 18.2: 3 ways. Kernel thread. User thread and hybrid.
+
+
+
+- [.] Chapter 19: Windows 7
+  - [X] 19.1 History
+  - [X] 19.2 Design Principles
+    - [X] 19.2.1 Security
+    - [X] 19.2.2 Reliability
+    - [X] 19.2.3 Windows and POSIX Application Compatibility
+    - [X] 19.2.4 High performance
+    - [X] 19.2.5 Extensibility
+    - [X] 19.2.6 Portability
+    - [X] 19.2.7 International support
+    - [X] 19.2.8 Energy Efficiency
+    - [X] 19.2.9 Dynamic device support
+  - [ ] 19.3 System components
+    - [ ] 19.3.1 Hardware abstraction layer
+  - [ ] 19.5
+  - [ ] 19.6
+  - [ ] 19.7
+  - [ ] 19.8
+
+
+
+- [ ] Chapter 20:
+  - [ ] 20.1
+  - [ ] 20.2
+  - [ ] 20.3
+  - [ ] 20.4
+  - [ ] 20.5
+  - [ ] 20.6
+  - [ ] 20.7
+  - [ ] 20.8
+  - [ ] 20.9
+  - [ ] 20.10
+  - [ ] 20.11
+  - [ ] 20.12
+  - [ ] 20.13
+  - [ ] 20.14
+

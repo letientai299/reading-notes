@@ -1,0 +1,47 @@
+Starting as 2016-05-02.
+
+0.  [X] Introduction: 2016-05-02
+
+=   Part 1 - Learning the shell =
+1.  [ ] What is the shell?
+2.  [ ] Navigation
+3.  [ ] Exploring the system
+4.  [ ] Manipulating files and directories
+5.  [ ] Working with the commands
+6.  [ ] Redirection
+7.  [ ] Seeing the world as the shell sees it
+8.  [ ] Advanced keyboard tricks
+9.  [ ] Permissions
+10. [ ] Processes
+
+=   Part 2 - Configuration and the environment =
+11. [ ] The environment
+12. [X] A gentle introduction to vi: 2016-05-02
+13. [ ] Customizing the prompt
+
+=   Part 3 - Common tasks and essential tools =
+14. [ ] Package management
+15. [ ] Storage media
+16. [ ] Networking
+17. [ ] Searching for files
+18. [ ] Archiving and backup
+19. [ ] Regular expressions
+20. [ ] Text processing
+21. [ ] Formatting output
+22. [ ] Printing
+23. [ ] Compiling programs
+
+=   Part 4 - writing shell scripts =
+24. [ ] Writing your first script
+25. [ ] Starting a project
+26. [ ] Top-down design
+27. [ ] Flow control: branching with if
+28. [ ] Reading keyboard input
+29. [ ] Flow control: looping with while/until
+30. [ ] Troubleshooting
+31. [ ] Flow control: branching with case
+32. [ ] Positional parameters
+33. [ ] Flow control: looping with for
+34. [ ] Strings and numbers
+35. [ ] Arrays
+36. [ ] Exotica

@@ -1,0 +1,171 @@
+- [X] Introduction:
+  - "history ha a habit of repeating itself."
+
+= Part I: Introduction =
+
+- [X] Chapter 1: Different Database for Different Requirements:
+  - [X] Relational database design
+  - [X] Early database management systems.
+  - [X] The Relational database revolution.
+  - [X] Motivation for NoSQL Databases.
+  - [X] Case study.
+
+- [X] Chapter 2: Variety of NoSQL Databases:
+  - [X] Data management with distributed databases.
+  - [X] ACID and BASE:
+    - ACID: Atomicity, Consistency, Isolation, Durability
+    - BASE: Basically Available, Soft state, Eventually Consistent.
+  - [X] Four types of NoSQL Databases:
+    - [X] Key-Value databases:
+      - JSON: JavaScript Object Notation.
+    - [X] Document databases
+    - [X] Column Family databases
+    - [X] Graph databases
+
+
+= Part II: Key-Value Databases =
+
+- [X] Chapter 3: Introduction to Key-Value Databases:
+  - [X] From Arrays to Key-Value databases
+  - [X] Essential Features of Key-Value Databases:
+    - LRU: Least recently used.
+    - Scalability:
+      - Master-slave replication:
+        - Best for read more than write.
+        - Single point of failure.
+        - If master fails, one of the slaves becomes new master.
+      - Master-less replication
+        - Write more than read.
+        - How to avoid write conflicting.
+  - [X] Keys:
+    - Convert key to hash, then to int for fast data accessing.
+    - Use modulo to avoid conflict when writing. Only one replica be able to
+      write for one record.
+    - Unique within namespace.
+  - [X] Values.
+
+- [X] Key-Value database terminology:
+  - [X] Modeling terms:
+    - [X] Key
+    - [X] Value
+    - [X] Namespace
+    - [X] Partition
+    - [X] Partition key
+    - [X] Schemaless
+  - [X] Architecture terms:
+    - [X] Cluster:
+      - Loosely vs Tightly
+      - Master node (redis has such thing)
+      - Masterless (Riak)
+    - [X] Ring:
+      - What else beside ring? Start? Bus?
+    - [X] Replication
+  - [X] Implementation terms:
+    - [X] Hash function
+    - [X] Collision
+    - [X] Compression:
+      - Optimize memory:
+        - More RAM.
+        - Disk-based databases: LevelDB.
+
+- [X] Chapter 5: Designing for Key-Value Databases:
+  - [X] Key design and partitioning:
+    - [X] Keys should following a naming convention
+    - [X] Well designed keys save code
+    - [X] Dealing with ranges of values:
+      - This section provides example on how to search something in key-value database.
+        It's because NoSQL doesn't have standard SQL for searching.
+    - [X] Keys must take into account implementation limitations.
+      - Redis offer max 500MB for a key! That's impressive.
+    - [X] How keys are used in partitioning
+  - [X] Designing structure values:
+    - [X] Structured data types help reduce latency
+      - *Denormalization*: duplicate data to reduce cost (IO, join) and improve perf.
+    - [X] Large values can lead to inefficient read and write operations:
+      - If value if _smaller than what read head can read from disk_, multiple
+        values can be stored under one block, and be read as once. Subsequence
+        read can save one or more disk read.
+      - Document database is better for storing large value.
+  - [X] Limitations of Key-value databases:
+    - [X] Look up values by key only:
+      - Use text search. But I don't think:
+        - That is the only way.
+        - It's the best way.
+    - [X] Key-value databases do not support range queries.
+    - [X] No standard query language comparable to SQL for Relational databases.
+  - [X] Design Patterns for key-value databases.
+    - [X] Time to live (TTL) keys
+      - The book doesn't satisfy me on this pattern.
+    - [X] Emulating tables.
+    - [X] Aggregates
+    - [X] Atomic Aggregates
+    - [X] Enumerable keys.
+    - [X] Indexes.
+  - [X] Summary
+  - [X] Case Study: key-value databases for Mobile App configuration
+    - There's nothing interesting here. This also make me drop my interesting
+      in this book. Too easy.
+
+
+= Part III: Document Databases =
+
+- [X] Chapter 6: Introduction to Document Databases
+  - [X] What is a document?
+    - [X] Documents are not so simple after all
+      - There's BSON: binary JSON.
+    - [X] Documents and key-value pairs
+    - [X] Managing multiple documents in collections
+  - [X] Avoid explicit schema definitions.
+  - [X] Basic Operations on Documents Databases.
+    - [X] Inserting documents into a collection:
+      - UUID is something need to learn, it's cross language.
+    - [X] Deleting Documents from a Collection
+    - [X] Updating Documents in a Collection
+    - [X] Retrieving Documents from a Collection
+  - [X] Summary:
+    - This book is not good, just provides overview, not the depth.
+    - How documents are stored?
+    - How databases are implemented?
+    - How can they support complex features like search and indexing?
+    - Why mongoDb is so success?
+
+- [X] Chapter 7: Document Databases Terminology
+  - [X] Document and Collection Terms
+    - [X] Document
+    - [X] Collection
+    - [X] Embedded document
+    - [X] Schemaless
+    - [X] Polymorphic Schema
+  - [X] Types of Partitions
+    - [X] Vertical Partitioning:
+      - This term is used for Relational database, not NoSQL database.
+    - [X] Horizontal Partitioning or Sharding
+  - [X] Data modeling and query processing
+    - [X] Normalization
+    - [X] Denormalization
+    - [X] Query Processor
+  - [X] Summary
+
+- [ ] Chapter 8: Designing for Document Databases
+  - [ ] Normalization, Denormalization, and the Search for Proper Balance
+    - [ ] One to many relations
+    - [ ] Many to many relations
+    - [ ] The need for joins
+    - [ ] Executing Joins: The heavy lifting of relational databases
+    - [ ] What would a document database modeler do?
+  - [ ] Planing for mutable documents
+    - [ ] Avoid moving oversized documents
+  - [ ] The Goldilocks Zone of Indexes
+    - [ ] Read Heavy Applications
+    - [ ] Write Heavy Applications
+  - [ ] Modeling Common Relations
+    - [ ] One to many relations in Document Databases
+    - [ ] Many to many relations in Document Databases
+    - [ ] Modeling Hierarchies in Document Databases
+  - [ ] Summary
+  - [ ] Case Study: Customer Manifests
+    - [ ] Embed or Not Embed?
+    - [ ] Choosing Indexes
+    - [ ] Separate Collections by Type?
+
+

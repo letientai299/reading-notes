@@ -1,0 +1,292 @@
+- [X] Preface
+  - [X] C Is Punk Rock
+  - [X] Q & A (Or, the Parameters of the Book)
+  - [X] Standards: So Many to Choose From
+    - [X] The POSIX Standard
+  - [X] Some Logistics
+    - [X] The Second Edition
+    - [X] Conventions Used in This Book
+    - [X] Using Code Examples
+    - [X] Safari® Books Online
+    - [X] How to Contact Us
+    - [X] Acknowledgments
+
+- [X] I. The Environment
+  - [X] 1. Set Yourself Up for Easy Compilation
+    - [X] Use a Package Manager:
+    - [X] Do this a lot time already.
+    - [X] Compiling C with Windows
+      - [X] POSIX for Windows
+      - [X] Compiling C with POSIX
+      - [X] Compiling C Without POSIX
+    - [X] Which Way to the Library?
+      - [X] A Few of My Favorite Flags
+      - [X] Paths
+      - [X] Runtime Linking
+    - [X] Using Makefiles
+      - [X] Setting Variables
+      - [X] The Rules
+    - [X] Using Libraries from Source
+    - [X] Using Libraries from Source (Even if Your Sysadmin Doesn’t Want You To)
+    - [X] Compiling C Programs via Here Document
+      - [X] Include Header Files from the Command Line
+      - [X] The Unified Header
+      - [X] Here Documents
+      - [X] Compiling from stdin
+
+  - [X] 2. Debug, Test, Document
+    - [X] Using a Debugger
+      - [X] A Debugging Detective Story
+      - [X] GDB Variables
+      - [X] Print Your Structures
+    - [X] Using Valgrind to Check for Errors
+    - [X] Unit Testing
+      - [X] Using a Program as a Library
+      - [X] Coverage
+    - [X] Error Checking
+      - [X] What is the User’s Involvement in the Error?
+      - [X] The Context in Which the User is Working
+      - [X] How Should the Error Indication Be Returned?
+    - [X] Interweaving Documentation
+      - [X] Doxygen
+      - [X] Literate Code with CWEB
+
+  - [X] 3. Packaging Your Project
+    - [X] The Shell
+      - [X] Replacing Shell Commands with Their Outputs
+      - [X] Use the Shell’s for Loops to Operate on a Set of Files
+      - [X] Test for Files:
+      - Nice reminder for `echo $?`
+      - [X] fc
+    - [X] Makefiles vs. Shell Scripts
+    - [X] Packaging Your Code with Autotools
+      - [X] An Autotools Demo
+      - [X] Describing the Makefile with Makefile.am
+      - [X] The configure Script
+      - Don't have enought time for this.
+
+  - [X] 4. Version Control
+    - [X] Changes via diff
+    - [X] Git’s Objects
+      - [X] The Stash
+    - [X] Trees and Their Branches
+      - [X] Merging
+      - [X] The Rebase
+    - [X] Remote Repositories
+    - Central repo is still good.
+
+  - [X] 5. Playing Nice with Others
+    - [X] Dynamic Loading
+      - [X] The Limits of Dynamic Loading
+    - [X] The Process
+      - [X] Writing to Be Read by Nonnatives
+      - [X] The Wrapper Function
+      - [X] Smuggling Data Structures Across the Border
+      - [X] Linking
+    - [X] Python Host
+      - [X] Compiling and Linking
+      - [X] The Conditional Subdirectory for Automake
+      - [X] Distutils Backed with Autotools
+    - Get the idea. But not study carefully though. I don't need those things yet.
+
+- [O] II. The Language
+
+  - [X] 6. Your Pal the Pointer
+    - [X] Automatic, Static, and Manual Memory
+    - [X] Persistent State Variables
+    - [X] Pointers Without malloc
+      - [X] Structures Get Copied, Arrays Get Aliased
+      - [X] malloc and Memory-Twiddling
+      - [X] The Fault Is in Our Stars
+      - [X] All the Pointer Arithmetic You Need to Know
+      - [X] Typedef as a teaching tool
+      - At the end of this chapter, the author instroduce something like higher-order function.
+
+  - [X] 7. Inessential C Syntax that Textbooks Spend a Lot of Time Covering
+    - [X] Don’t Bother Explicitly Returning from main
+    - [X] Let Declarations Flow
+      - [X] Set Array Size at Runtime
+    - [X] Cast Less
+    - [X] Enums and Strings
+    - [X] Labels, gotos, switches, and breaks
+      - [X] goto Considered
+      - [X] switch
+    - [X] Deprecate Float
+    - [X] Comparing Unsigned Integers
+    - [X] Safely Parse Strings to Numbers
+
+  - [X] 8. Important C Syntax that Textbooks Often Do Not Cover
+    - [X] Cultivate Robust and Flourishing Macros
+      - [X] The Preprocessor:
+      - The limits of `sizeof`: "Some cats, when you point to a toy, will go and inspect the toy; some cats will sniff your finger."
+      - `#maybeNullOrEmptyVal[0] == '\0'`
+      - [X] Test Macros:
+      - `echo "" | gcc -dM -E -xc - | wc -l`: show how many predefined macros from GCC compiler (248 as version 5.4.0).
+      - `_Static_assert` since C11 is used to test as compiling time.
+      - [X] Header Guards
+    - [X] Linkage with static and extern
+      - Note the `static` keyword before the function. That's _internal_ linkage declaration of a function, make it like within the compiled object, avoid namespace clashing.
+       {{{c
+       static long double max(long double a, long double b){
+       return (a> b) ? a: b;
+       }
+       }}}
+      - Recall again, I used to see the error "function has been declared" or "multiple definition" long time ago when dealing with method body within header file, and the solution is always move the body into source file. This is the first time I learn about static function, internal linkage.
+      - [X] Externally Linked Variables in Header Files
+      - Be care when define a file scope variable without static, compiler may link it with another definition with same name in another file, thus, introduce a bug.
+    - [X] The const Keyword
+      - `const` is a literary device, not a lock.
+      - [X] Noun-Adjective Form
+      - [X] Tension
+      - [X] Depth
+      - [X] The `char const **` Issue
+
+  - [X] 9. Easier Text Handling
+    - [X] Making String Handling Less Painful with asprintf
+      - [X] Security
+      - [X] Constant Strings
+      - Hard-coded string can't be change even with the pointer.
+      - Use `strdup` to create a string from a hard-coded value.
+      - [X] Extending Strings with asprintf
+    - [X] A Pæan to `strtok`:
+    - strtok: string tokenize.
+    - strtok consider double delimiter as one.
+
+    - [X] Unicode
+      - [X] The Encoding for C Code
+      - [X] Unicode Libraries
+      - [X] The Sample Code
+
+  - [X] 10. Better Structures
+    - [X] Compound Literals
+      - [X] Initialization via Compound Literals
+    - [X] Variadic Macros
+    - [X] Safely Terminated Lists
+    - [X] Multiple Lists
+    - [X] Foreach
+    - [X] Vectorize a Function
+    - [X] Designated Initializers
+    - This thing about C struct is really new to me. Thanks to this book.
+    - [X] Initialize Arrays and Structs with Zeros
+    - `int arr[10] = {[6] = 1, [3] = 8};` COOL!
+    - [X] Typedefs Save the Day
+      - POSIX reserves `_t`, so I won't never name my type or variable with `_t` ending.
+      - [X] A Style Note
+    - [X] Return Multiple Items from a Function
+      - [X] Reporting Errors
+    - [X] Flexible Function Inputs
+      - [X] Declare Your Function as printf-Style
+      - [X] Optional and Named Arguments
+      - For struct, _if an item is initialized multiple times, then the last initialization takes precedence_.
+      - [X] Polishing a Dull Function
+    - [X] The Void Pointer and the Structures It Points To
+      - [X] Functions with Generic Inputs
+      - [X] Generic Structures
+      - 7 bytes is enough to express any one character UTF-8 string.
+      - A single tyoe for each purpose.
+
+  - [O] 11. Object-Oriented Programming in C
+    - [.] Extending Structures and Dictionaries
+      - TODO: What is *The Enischeidungs problem*?
+      - Recall that function marked as `static` can't be used outside the file. That's a form of private.
+      - [X] Implementing a Dictionary
+      - [ ] C, with fewer seams
+        - The fisrt time in the book the author mentions about `union`. That keyword is a monster.
+        - And this is fabulous:
+        {{{c
+          typedef struct point {
+            double x, y;
+          } point;
+
+          typedef struct {
+            union { // share the same content between named and anomyous structure.
+              struct point; // anomyous structure, all element of point can be use directly by parent struct
+              point p2; // named structure, we can pass p2 to functions that only using point.
+            }
+            double z; // 3rd dimension.
+          } point3d;
+        }}}
+        - *As struct evolves... to becoming a core of how your data is organized, the benefits to points _wax_ and the benefits to nonpointers _wane_*. (wax: sang bong, wane: suy yeu)
+    - [X] Functions in Your Structs
+      - [X] Vtables
+    - [X] Scope
+      - [X] Private Struct Elements
+        - We can have some private structure in C, real private, but few authors do so, because they don't know. Now I know.
+    - [X] Overload
+      - [X] _Generic
+    - [X] Count References
+      - Actually I have skipped this.
+      - [X] Example: A Substring Object
+      - [X] Example: An Agent-Based Model of Group Formation
+      - [X] Conclusion
+
+  - [X] 12. Parallel Threads
+    - Can't use right now. Hence, didn't focus during reading.
+    - [X] The Environment
+      - [X] The Ingredients
+    - [X] OpenMP
+      - [X] Compiling OpenMP, pthreads, and C atoms
+      - [X] Interference
+      - [X] Map-reduce
+      - [X] Multiple Tasks
+    - [X] Thread Local
+      - [X] Localizing Nonstatic Variables
+    - [X] Shared Resources
+      - [X] Atoms
+    - [X] Pthreads
+    - [X] C atoms
+      - [X] Atomic structs
+
+  - [X] 13. Libraries
+    - Actually I don't understand anything.
+    - [X] GLib
+    - [X] POSIX
+      - [X] Parsing Regular Expressions:
+      - For sure, I don't like the idea of using C for regex. Functions look scary.
+      - [X] Using mmap for Gigantic Data Sets
+    - [X] The GNU Scientific Library
+    - [X] SQLite
+      - [X] The Queries
+    - [X] libxml and cURL
+
+  - [X] Epilogue
+  - [X] A. C 101
+    - [X] The Structure
+      - [X] C requires a compilation step, which consists of running a single command
+      - [X] There’s a standard library, and it’s part of your operating system
+      - [X] There’s a preprocessor
+      - [X] There are two types of comment
+      - [X] There is no print keyword
+    - [X] Variable Declarations
+      - [X] Variables have to be declared
+      - [X] Even functions have to be declared or defined
+      - [X] Basic types can be aggregated into arrays and structs
+      - [X] New structure types can be defined
+      - [X] You can find out how much space a type takes
+      - `%zu` is specifier for  `printf` to deal with `size_t`
+      - [X] There is no special string type
+    - [X] Expressions
+      - [X] The scoping rules for C are very simple
+      - [X] The main function is special
+      - [X] Most of what a C program actually does is evaluate expressions
+      - [X] Functions are evaluated using copies of the inputs
+      - [X] Expressions are delimited by semicolons
+      - [X] There are many shortcuts for incrementing or scaling a variable
+      - [X] C has an expansive definition of truth
+      - `&&` and `||` are lazy.
+      - [X] Dividing two integers always produces an integer
+      - [X] C has a trinary conditional operator
+      - [X] Branching and looping expressions are not very different from any other language
+      - [X] The for loop is just a compact version of the while loop
+    - [X] Pointers
+      - [X] You can directly request a block of memory
+      - [X] Arrays are just blocks of memory; any block of memory can be used like an array
+      - [X] A pointer to a scalar is really just a one-item array
+      - [X] There is a special notation for elements of pointed-to structs
+      - [X] Pointers let you modify function inputs
+      - [X] Everything is somewhere, so everything can be pointed to
+
+- [X] Glossary
+  - RTFM: he denote it as "Read the manual", but we all know what the 'F' mean.
+- [X] References
+- [X] Index

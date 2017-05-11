@@ -1,0 +1,153 @@
+- *A 1988 book. Even before C89 came out*
+- [X] Preface
+  - ANSI C vs C89? -> Mostly the same.
+  - _C is not a big language, and it is not well served by a big book._
+- [X] Preface to the First Edition
+
+- [X] Chapter 1: A Tutorial Introduction
+  - [X] 1.1 Getting Started
+  - [X] 1.2 Variables and Arithmetic Expressions
+    - *Pick the style that suit you, then use it consistently*.
+  - [X] 1.3 The For Statement
+  - [X] 1.4 Symbolic Constants
+  - [X] 1.5 Character Input and Output
+  - [X] 1.6 Arrays
+  - [X] 1.7 Functions
+  - [X] 1.8 Arguments—Call by Value
+  - [X] 1.9 Character Arrays
+  - [X] 1.10 External Variables and Scope
+    - If variable is defined before the its usage inside the function (physically in file), then we don't need `extern` keyword.
+    - The exercise for this chapter is a C code formatter and syntax checker. Oh my god. Sure, all the knowledge given in this chapter is enough for such a thing. But that's still a lot of work to do.
+
+- [O] Chapter 2: Types, Operators, and Expressions
+  - [X] 2.1 Variable Names
+    - Var name should start with a letter.
+    - *We tend to use short names for local variables, especially loop indices, and longer names for external variables.*
+  - [X] 2.2 Data Types and Sizes
+  - [X] 2.3 Constants
+  - [X] 2.4 Declarations
+  - [X] 2.5 Arithmetic Operators
+  - [X] 2.6 Relational and Logical Operators
+  - [X] 2.7 Type Conversions
+  - [X] 2.8 Increment and Decrement Operators
+  - [X] 2.9 Bitwise Operators
+    - `x & ~077` set last 6 bits of `x` to 0, same with `x & 0177700` if `x` is 16-bit. But the former is portable form, independent with x bit length.
+  - [X] 2.10 Assignment Operators and Expressions
+  - [X] 2.11 Conditional Expressions
+  - [X] 2.12 Precedence and Order of Evaluation
+    - *if you don't know how they are done on various machines, you won't be tempted to take advantage of a particular implementation*.
+
+- [X] Chapter 3: Control Flow
+  - [X] 3.1 Statements and Blocks
+  - [X] 3.2 If-Else
+  - [X] 3.3 Else-If
+  - [X] 3.4 Switch
+  - [X] 3.5 Loops—While and For
+  - [X] 3.6 Loops—Do-while
+  - [X] 3.7 Break and Continue
+  - [X] 3.8 Goto and Labels
+
+- [X] Chapter 4: Functions and Program Structure
+  - [X] 4.1 Basics of Functions
+  - [X] 4.2 Functions Returning Non-integers
+  - [X] 4.3 External Variables
+  - [X] 4.4 Scope Rules
+  - [X] 4.5 Header Files
+  - [X] 4.6 Static Variables
+  - [X] 4.7 Register Variables
+    - It's not possible to get address of a registered variable.
+  - [X] 4.8 Block Structure
+  - [X] 4.9 Initialization
+  - [X] 4.10 Recursion
+  - [X] 4.11 The C Preprocessor
+
+- [X] Chapter 5: Pointers and Arrays
+  - [X] 5.1 Pointers and Addresses
+  - [X] 5.2 Pointers and Function Arguments
+  - [X] 5.3 Pointers and Arrays
+  - [X] 5.4 Address Arithmetic
+    - How to implement `malloc` and `free`?
+  - [X] 5.5 Character Pointers and Functions
+  - [X] 5.6 Pointer Arrays; Pointers to Pointers
+  - [X] 5.7 Multi-dimensional Arrays
+  - [X] 5.8 Initialization of Pointer Arrays
+  - [X] 5.9 Pointers vs. Multi-dimensional Arrays
+  - [X] 5.10 Command-line Arguments
+  - [X] 5.11 Pointers to Functions
+  - [X] 5.12 Complicated Declarations
+
+- [X] Chapter 6: Structures
+  - [X] 6.1 Basics of Structures
+  - [X] 6.2 Structures and Functions
+  - [X] 6.3 Arrays of Structures
+    - `sizeof` can't be used in `#if` because preprocessor can't understand type.
+  - [X] 6.4 Pointers to Structures
+  - [X] 6.5 Self-referential Structures
+    - Nice introduction to a tree.
+  - [X] 6.6 Table Lookup
+  - [X] 6.7 Typedef
+  - [X] 6.8 Unions
+  - [X] 6.9 Bit-fields
+
+- [X] Chapter 7: Input and Output
+  - [X] 7.1 Standard Input and Output
+  - [X] 7.2 Formatted Output—Printf
+  - [X] 7.3 Variable-length Argument Lists
+  - [X] 7.4 Formatted Input—Scanf
+  - [X] 7.5 File Access
+  - [X] 7.6 Error Handling—Stderr and Exit
+  - [X] 7.7 Line Input and Output
+  - [X] 7.8 Miscellaneous Functions
+
+- [O] Chapter 8: The UNIX System Interface
+  - [X] 8.1 File Descriptors
+    - File Descriptors are `int`
+    - 0, 1 and 2 is `stdin`, `stdou` and `stderr`
+  - [X] 8.2 Low Level I/O—Read and Write
+  - [X] 8.3 Open, Creat, Close, Unlink
+  - [X] 8.4 Random Access—Lseek
+  - [X] 8.5 Example—An Implementation of Fopen and Getc
+  - [X] 8.6 Example—Listing Directories
+  - [X] 8.7 Example—A Storage Allocator
+    - Absolutely I'm not fully understand this section.
+
+- [X] APPENDIX A: Reference Manual
+  - [X] A1. Introduction
+  - [X] A2. Lexical Conventions
+  - [X] A3. Syntax Notation
+  - [X] A4. Meaning of Identifiers
+  - [X] A5. Objects and Lvalues
+  - [X] A6. Conversions
+  - Skip the rest.
+  - [X] A7. Expressions
+  - [X] A8. Declarations
+  - [X] A9. Statements
+  - [X] A10. External Declarations
+  - [X] A11. Scope and Linkage
+  - [X] A12. Preprocessing
+  - [X] A13. Grammar
+
+- [X] APPENDIX B: Standard Library
+  - The book list only 15 headers. Is that all (for ANSI C)? Yes.
+  - C89: 15, C95: +3, C99 +6, C11 + 5 = 29
+  - Only 29 STL headers. Java 8 has more than 4000 public classes.
+  - [X] B1. Input and Output: <stdio.h>
+    - `r`, `w`, `a`, `r+`, `w+`, `a+`.
+    - Recall something in the 21st C book, use string as the config, so that we could extends the API without the need to update enum config.
+  - [X] B2. Character Class Tests: <ctype.h>
+    - No mention about Unicode.
+  - [X] B3. String Functions: <string.h>
+    - As that time, there's no "secure" functions yet.
+  - [X] B4. Mathematical Functions: <math.h>
+  - [X] B5. Utility Functions: <stdlib.h>
+  - [X] B6. Diagnostics: <assert.h>
+  - [X] B7. Variable Argument Lists: <stdarg.h>
+  - [X] B8. Non-local Jumps: <setjmp.h>
+  - [X] B9. Signals: <signal.h>
+  - [X] B10. Date and Time Functions: <time.h>
+  - [X] B11. Implementation-defined Limits: <limits.h> and <float.h>
+
+- [X] APPENDIX C: Summary of Changes
+  - I read this first. Need something to estimate time I'd spend  for this book.
+  - C used to have an `entry` keyword.
+  - Very nice, `&arr == arr` is `arr` is an array.

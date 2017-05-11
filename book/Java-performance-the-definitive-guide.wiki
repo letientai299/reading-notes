@@ -1,0 +1,301 @@
+ - [X] Preface
+
+  - [X] Who Should (and Shouldn’t) Read This book
+    - Goal: detail knowledge about the JVM and API.
+  - [X] Conventions Used in This Book
+  - [X] Using Code Examples
+  - [X] Safari® Books Online
+  - [X] How to Contact Us
+  - [X] Acknowledgments
+
+- [X] 1. Introduction
+  - *This is a book about the art and science of Java performance*.
+
+  - [X] A Brief Outline
+  - [X] Platforms and Conventions
+    - [X] JVM Tuning Flags
+      - 2 kind of flags: `-XX:(+/-)BooleanFlag` and `-XX:Name=value`
+      - What about `-Xmx` and `-Xms`?
+  - [X] The Complete Performance Story
+    - *Every line of code involves a choice, and if there is a choice between two simple, straightforward ways of programming, choose the more performant one*
+    - We should optimize for the common case.
+  - [X] Summary
+
+- [X] 2. An Approach to Performance Testing
+
+  - [X] Test a real application
+    - [X] Microbenchmarks
+      - [X] Microbenchmarks must use their results
+      - [X] Microbenchmarks must not include extraneous operations
+      - [X] Microbenchmarks must measure the correct input
+      - *Writing a microbenchmark is hard. There are very limited times when it can be useful.*
+    - [X] Macrobenchmarks
+    - [X] Mesobenchmarks
+    - [X] Common Code Examples
+  - [X] Understand Throughput, Batching, and Response Time
+    - [X] Elapsed Time (Batch) Measurements
+    - [X] Throughput Measurements
+    - [X] Response Time Tests
+  - [X] Understand Variability
+    -  The job of a performance engineer is to look at the data, understand those probabilities, and determine where to spend time based on all the available data.
+  - [X] Test Early, Test Often
+  - [X] Summary
+
+- [ ] 3. A Java Performance Toolbox
+
+  - [ ] Operating System Tools and Analysis
+    - [ ] CPU Usage
+      - [ ] Java and Single-CPU usage
+      - [ ] Java and Multi-CPU usage
+    - [ ] The CPU Run Queue
+    - [ ] Disk Usage
+    - [ ] Network Usage
+  - [ ] Java Monitoring Tools
+    - [ ] Basic VM information
+      - [ ] Working with tuning flags
+    - [ ] Thread Information
+    - [ ] Class Information
+    - [ ] Live GC Analysis
+    - [ ] Heap Dump Post Processing
+  - [ ] Profiling Tools
+    - [ ] Sampling Profilers
+    - [ ] Instrumented Profilers
+    - [ ] Blocking Methods and Thread Timelines
+    - [ ] Native Profilers
+  - [ ] Java Mission Control
+    - [ ] Java Flight Recorder
+      - [ ] JFR Overview
+      - [ ] JFR Memory View
+      - [ ] JFR Code View
+      - [ ] Overview of JFR Events
+    - [ ] Enabling JFR
+      - [ ] Enabling JFR via Mission Control
+      - [ ] Enabling JFR via the command line
+    - [ ] Selecting JFR events
+  - [ ] Summary
+
+- [ ] 4. Working with the JIT Compiler
+
+  - [ ] Just-In-Time Compilers: An Overview
+    - [ ] Hotspot Compilation
+  - [ ] Basic Tunings: Client or Server (or both)
+    - [ ] Optimizing Start-up
+    - [ ] Optimizing Batch Operations
+    - [ ] Optimizing Long-Running Applications
+  - [ ] Java and JIT compiler versions
+  - [ ] Intermediate Tunings for the Compiler
+    - [ ] Tuning the Code Cache
+    - [ ] Compilation Thresholds
+    - [ ] Inspecting the Compilation Process
+  - [ ] Advanced Compiler Tunings
+    - [ ] Compilation Threads
+    - [ ] Inlining
+    - [ ] Escape Analysis
+  - [ ] Deoptimization
+    - [ ] Not Entrant Code
+    - [ ] Deoptimizing Zombie Code
+  - [ ] Tiered Compilation Levels
+  - [ ] Summary
+
+- [ ] 5. Introduction to Garbage Collection
+
+  - [ ] Garbage Collection Overview
+    - [ ] Generational Garbage Collectors
+    - [ ] GC Algorithms
+      - [ ] The Serial Garbage Collector
+      - [ ] The Throughput Collector
+      - [ ] The CMS Collector
+      - [ ] The G1 Collector
+    - [ ] Choosing a GC Algorithm
+      - [ ] GC Algorithms and Batch Jobs
+      - [ ] GC Algorithms and Throughput Tests
+      - [ ] GC Algorithms and Response Time Tests
+      - [ ] Choosing between CMS and G1
+  - [ ] Basic GC Tuning
+    - [ ] Sizing the Heap
+    - [ ] Sizing the Generations
+    - [ ] Sizing PermGen and Metaspace
+    - [ ] Controlling Parallelism
+    - [ ] Adaptive Sizing
+  - [ ] GC Tools
+  - [ ] Summary
+
+- [ ] 6. Garbage Collection Algorithms
+
+  - [ ] Understanding the Throughput Collector
+    - [ ] Adaptive and Static Heap Size Tuning
+  - [ ] Understanding the CMS Collector
+    - [ ] Tuning to solve Concurrent Mode Failures
+      - [ ] Running the background thread more often
+      - [ ] Adjusting the CMS background threads
+    - [ ] Tuning CMS for Permgen
+    - [ ] Incremental CMS
+  - [ ] Understanding the G1 Collector
+    - [ ] Tuning G1
+      - [ ] Tuning the G1 Background Threads
+      - [ ] Tuning G1 to run more (or less) frequently
+      - [ ] Tuning G1 Mixed GC cycles
+  - [ ] Advanced Tunings
+    - [ ] Tenuring and Survivor Spaces
+    - [ ] Allocating Large Objects
+      - [ ] Thread Local Allocation Buffers
+      - [ ] Sizing TLABs
+      - [ ] Humongous Objects
+      - [ ] G1 Region Sizes
+      - [ ] Humongous Objects
+    - [ ] AggressiveHeap
+    - [ ] Full Control over Heap Size
+  - [ ] Summary
+
+- [ ] 7. Heap Memory Best Practices
+
+  - [ ] Heap Analysis
+    - [ ] Heap Histograms
+    - [ ] Heap Dumps
+    - [ ] Out of Memory Errors
+      - [ ] Out of Native Memory
+      - [ ] Out of Permgen or Metaspace Memory
+      - [ ] Out of Heap Memory
+      - [ ] GC Overhead Limit Reached
+  - [ ] Using less memory
+    - [ ] Reducing Object Size
+    - [ ] Lazy Initialization
+      - [ ] Eager De-initialization
+    - [ ] Immutable and Canonical Objects
+      - [ ] Creating Canonical Objects
+    - [ ] String Interning
+  - [ ] Object Lifecycle Management
+    - [ ] Object Reuse
+      - [ ] Object Pools
+      - [ ] Thread Local Variables
+    - [ ] Weak, Soft, and Other References
+      - [ ] Soft References
+      - [ ] Weak References
+      - [ ] Finalizers and Final References
+  - [ ] Summary
+
+- [ ] 8. Native Memory Best Practices
+
+  - [ ] Footprint
+    - [ ] Measuring Footprint
+    - [ ] Minimizing Footprint
+    - [ ] Native NIO Buffers
+    - [ ] Native Memory Tracking
+      - [ ] NMT over time
+  - [ ] JVM tunings for the Operating System
+    - [ ] Large Pages
+      - [ ] Linux Huge (Large) Pages
+      - [ ] Linux Transparent Huge Pages
+      - [ ] Windows Large Pages
+      - [ ] Large Page Sizes
+    - [ ] Compressed oops
+  - [ ] Summary
+
+- [ ] 9. Threading and Synchronization Performance
+
+  - [ ] Thread Pools and ThreadPoolExecutors
+    - [ ] Setting the Maximum Number of Threads
+    - [ ] Setting the Minimum Number of Threads
+    - [ ] Thread Pool Task Sizes
+    - [ ] Sizing a ThreadPoolExecutor
+  - [ ] The ForkJoinPool
+    - [ ] Automatic Parallelization
+  - [ ] Thread Synchronization
+    - [ ] Costs of synchronization
+      - [ ] Synchronization and Scalability
+      - [ ] Costs of Locking Objects
+    - [ ] Avoiding synchronization
+    - [ ] False Sharing
+  - [ ] JVM Thread Tunings
+    - [ ] Tuning Thread Stack Sizes
+    - [ ] Biased Locking
+    - [ ] Lock Spinning
+    - [ ] Thread Priorities
+  - [ ] Monitoring Threads and Locks
+    - [ ] Thread Visibility
+    - [ ] Blocked Thread Visibility
+      - [ ] Blocked Threads and JFR
+      - [ ] Blocked Threads and JStack
+  - [ ] Summary
+
+- [ ] 10. Java Enterprise Edition Performance
+
+  - [ ] Basic Web Container Performance
+    - [ ] HTTP Session State
+      - [ ] HTTP Session State Memory
+      - [ ] Highly-Available HTTP Session State
+  - [ ] Thread Pools
+  - [ ] Enterprise Java Session Beans
+    - [ ] Tuning EJB pools
+    - [ ] Tuning EJB Caches
+    - [ ] Local and Remote Instances
+  - [ ] XML and JSON Processing
+    - [ ] Data Size
+    - [ ] An Overview of Parsing and Marshalling
+    - [ ] Choosing a parser
+      - [ ] Pull Parsers
+      - [ ] Push Parsers (SAX)
+      - [ ] Alternate Parsing Implementations and Parser Factories
+    - [ ] XML Validation
+    - [ ] Document Models
+    - [ ] Java Object Models
+  - [ ] Object Serialization
+    - [ ] Transient Fields
+    - [ ] Overriding Default Serialization
+    - [ ] Compressing Serialized Data
+    - [ ] Keeping Track of Duplicate Objects
+  - [ ] Java EE Networking APIs
+    - [ ] Sizing Data Transfers
+  - [ ] Summary
+
+- [ ] 11. Database Performance Best Practices
+
+  - [ ] JDBC
+    - [ ] JDBC Drivers
+    - [ ] Prepared Statements and Statement Pooling
+      - [ ] Setting up the statement pool
+      - [ ] Managing Statement Pools
+    - [ ] JDBC Connection Pools
+    - [ ] Transactions
+      - [ ] JDBC Transaction Control
+      - [ ] Transaction Isolation and Locking
+    - [ ] Result Set Processing
+  - [ ] JPA
+    - [ ] Transaction Handling
+    - [ ] Optimizing JPA Writes
+    - [ ] Optimizing JPA Reads
+      - [ ] Reading less data
+      - [ ] Using JOIN in queries
+      - [ ] Batching and queries
+    - [ ] JPA Caching
+      - [ ] Default Caching (Lazy Loading)
+      - [ ] Caching and Eager Loading
+      - [ ] Join Fetch and Caching
+      - [ ] Avoiding Queries
+      - [ ] Sizing the JPA cache
+    - [ ] JPA Read-Only Entities
+  - [ ] Summary
+
+- [ ] 12. Java SE API Tips
+
+  - [ ] Buffered I/O
+  - [ ] Class Loading
+  - [ ] Random numbers
+  - [ ] JNI
+  - [ ] Exceptions
+  - [ ] String Performance
+  - [ ] Logging
+  - [ ] Java Collections API
+    - [ ] Synchronized vs. Unsynchronized
+    - [ ] Collection Sizing
+    - [ ] Collections and Memory Efficiency
+  - [ ] AggressiveOpts
+    - [ ] Alternate Implementations
+    - [ ] Miscellaneous Flags
+  - [ ] Lambdas and Anonymous Classes
+    - [ ] Lambda and Anonymous Classloading
+  - [ ] Stream and Filter Performance
+    - [ ] Lazy Traversal
+  - [ ] Summary
+
+- [ ] A. Summary of Tuning Flags

@@ -1,0 +1,147 @@
+- [X] 1 Introduction
+
+- [X] 2 Creating and Destroying Objects
+  - [X] Item 1: Consider static factory methods instead of constructors
+  - [X] Item 2: Consider a builder when faced with many constructor parameters
+  - [X] Item 3: Enforce the singleton property with a private constructor or an enum type
+  - [X] Item 4: Enforce noninstantiability with a private constructor
+  - [X] Item 5: Avoid creating unnecessary objects
+  - [X] Item 6: Eliminate obsolete object references,4
+  - [X] Item 7: Avoid finalizers
+
+- [X] 3 Methods Common to All Objects
+  - [X] Item 8: Obey the general contract when overriding equal s
+  - [X] Item 9: Always override hashCode when you override equals.
+  - [X] Item 10: Always override toString
+  - [X] Item 11: Override clone judiciously
+  - [X] Item 12: Consider implementing Comparable
+
+- [X] 4 Classes and Interfaces
+  - [X] Item 13: Minimize the accessibility of classes and members
+    - Non zero length array is always mutable.
+  - [X] Item 14: In public classes, use accessor methods, not public fields
+  - [X] Item 15: Minimize mutability
+  - [X] Item 16: Favor composition over inheritance
+    - Inheritance breaks encapsulation.
+  - [X] Item 17: Design and document for inheritance or else prohibit it
+  - [X] Item 18: Prefer interfaces to abstract classes
+  - [X] Item 19: Use interfaces only to define types
+  - [X] Item 20: Prefer class hierarchies to tagged classes
+  - [X] Item 21: Use function objects to represent strategies
+  - [X] Item 22: Favor static member classes over nonstatic
+
+- [X] 5 Generics
+  - [X] Item 23: Don't use raw types in new code
+    - Generic type information is erased at runtime.
+    - Type information is helpful for *compile time* checking.
+  - [X] Item 24: Eliminate unchecked warnings
+    - Every unchecked warning represents the potential for a `ClassCastException`.
+  - [X] Item 25: Prefer lists to arrays
+    - `Covariant`: `Sub[]` is subtype of `Super[]` -> Array is deficient.
+    - Arrays and generics do not mix well.
+    - `List.toArray()` *locks* the list internally.
+    - Array provides runtime type safety but not compile time, and list the otherwise.
+  - [X] Item 26: Favor generic types
+  - [X] Item 27: Favor generic methods
+    - *It would be nice if the language did the same kind of type inferences when invoking constructors on generic tyeps as it does when invoking generic methods.* Now it does!
+    - *Generic singleton factory pattern*: share same object across mutiple types. `Collections.emptySet()` is an example.
+  - [X] Item 28: Use bounded wildcards to increase API flexibility
+    - Recall something from the Scala book:
+    - PECS: Producers-entend, Consumers-super
+    - out - Super -> E -> Sub - in.
+    - If the user of a class has to think about wildcard types, there is something wrong with the class's API.
+    - Type inference rules take 16 pages in the language spec.
+    - All cmoparables and comparators are consumers.
+  - [X] Item 29: Consider typesafe heterogeneous containers
+    - I don't know about `AtomiReference` and `ThreadLocal` in java yet (btw, the name of thread recall `_Thread_local` in C++)
+
+- [X] 6 Enums and Annotations
+  - [X] Item 30: Use enums instead of int constants
+  - [X] Item 31: Use instance fields instead of ordinals
+    - Enum has `ordinal` method.
+  - [X] Item 32: Use EnumSet instead of bit fields
+    - First time heard about `EnumSet`
+  - [X] Item 33: Use EnumMap instead of ordinal indexing
+    - First time heard about `EnumMap`, too.
+  - [X] Item 34: Emulate extensible enums with interfaces
+    - So, enum can implement interface.
+  - [X] Item 35: Prefer annotations to naming patterns
+  - [X] Item 36: Consistently use the Override annotation
+  - [X] Item 37: Use marker interfaces to define types
+
+- [X] 7 Methods
+  - [X] Item 38: Check parameters for validity
+  - [X] Item 39: Make defensive copies when needed
+    - Make change in a look-like-immutable object is considered an attack
+    - Think twice before returning a reference to an internal component to caller.
+  - [X] Item 40: Design method signatures carefully
+    - For utility method: *when in doubt, leave it out*
+  - [X] Item 41: Use overloading judiciously
+    - The selection among overloaded methods is *static*, while selection among overrided methods is *dynamic*.
+    - Never export 2 overloadings with the same number of parameters.
+    - Rules to choose which overloaded methods take 30 pages in the spec.
+  - [X] Item 42: Use varargs judiciously
+    - Using `Array.asList()` print an array is *obsolete*. Use `Array.toString()`.
+  - [X] Item 43: Return empty arrays or collections, not nulls
+    - I should learn to use `@NonNull` and `@Nullable`.
+    - `List.toArray()` requires one input is merely for determine the return type.
+  - [X] Item 44: Write doc comments for all exposed API elements
+    - Thing that everyone know. No one does.
+    - Focus on the contract and what.
+    - In case that class is designed for inheritance, also mention how.
+    - Take care about side effect.
+
+- [X] 8 General Programming
+  - [X] Item 45: Minimize the scope of local variables
+    - Prefer `for-each` over `while` as it reduce scope of intermediate variable.
+  - [X] Item 46: Prefer for-each loops to traditional for loops
+  - [X] Item 47: Know and use the libraries
+  - [X] Item 48: Avoid float and double if exact answers are required
+  - [X] Item 49: Prefer primitive types to boxed primitives
+    - Auto boxing is slow.
+    - Unboxing can throw NPE
+  - [X] Item 50: Avoid strings where other types are more appropriate .
+  - [X] Item 51: Beware the performance of string concatenation
+  - [X] Item 52: Refer to objects by their interfaces
+  - [X] Item 53: Prefer interfaces to reflection
+  - [X] Item 54: Use native methods judiciously
+    - Rarely use native method for performance.
+  - [X] Item 55: Optimize judiciously
+  - [X] Item 56: Adhere to generally accepted naming conventions
+
+- [X] 9 Exceptions
+  - [X] Item 57: Use exceptions only for exceptional conditions
+  - [X] Item 58: Use checked exceptions for recoverable conditions and runtime exceptions for programming errors
+  - [X] Item 59: Avoid unnecessary use of checked exceptions
+  - [X] Item 60: Favor the use of standard exceptions
+  - [X] Item 61: Throw exceptions appropriate to the abstraction
+  - [X] Item 62: Document all exceptions thrown by each method
+  - [X] Item 63: Include failure-capture information in detail messages
+  - [X] Item 64: Strive for failure atomicity
+  - [X] Item 65: Don't ignore exceptions
+
+- [X] 10 Concurrency
+  - [X] Item 66: Synchronize access to shared mutable data
+    - `++` performs *both read and write* to the variable.
+  - [X] Item 67: Avoid excessive synchronization
+    - One example for deadlock: main thread *sync* and wait for observer to complete the task, observer spawn new thread to remove itself once some heavy processsing is complete, the new thread try acquire lock on the observer, and can't. Thus the observer can't complete its task, and main thread waiting forever.
+  - [X] Item 68: Prefer executors and tasks to threads
+  - [X] Item 69: Prefer concurrency utilities to wait and notify
+  - [X] Item 70: Document thread safety
+  - [X] Item 71: Use lazy initialization judiciously
+    - If using lazy, use Synchronize accessor.
+  - [X] Item 72: Don't depend on the thread scheduler
+  - [X] Item 73: Avoid thread groups
+
+- [O] 11 Serialization
+  - [X] Item 74: Implement Serializable judiciously
+  - [X] Item 75: Consider using a custom serialized form
+  - [X] Item 76: Write `read0bject` methods defensively
+    - That method is a form of constructor, which take input as a bytestream.
+  - [X] Item 77: For instance control, prefer enum types to `readResolve`
+    - Very complicate. Hacking is hard.
+  - [X] Item 78: Consider serialization proxies instead of serialized instances
+    - Hard but interesting. I should read JDK code.
+
+- [X] Appendix: Items Corresponding to First Edition
+

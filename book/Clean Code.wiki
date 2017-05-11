@@ -1,0 +1,139 @@
+CLEAN CODE - Robert C. Martin
+==========================
+
+_ban dau viet bang markdown, tieng Viet full unikey, ve sau chuyen qua dung vimwiki, nhung luoi copy paste lai, nen chi doi extension file thoi_
+
+Tài liệu nhỏ này ghi chép lại các suy nghĩ và kinh nghiệm rút ra sau khi đọc tập sách. Đây là note đầu tiên viết trong thư viện, vừa thử nghiệm ý tưởng lưu trữ mới (tránh phụ thuộc vào Word và cũng để luyện tập các sử dụng Markdown luôn.
+
+_Mình thích cái cách emoji icon được hỗ trợ mọi nơi trong Markdown_ :smile: :+1: :heart: :arrows_clockwise:
+
+--------------------------
+
+
+Contents
+----
+1. [Shortest Rules](#Shortest-Rules)
+1. [Clean Code](#clean-code)
+1. [Meaningful Names](#meaningful-names)
+1. [Functions](#fuctions)
+1. [Comments](#comments)
+1. [Formatting](#formatting)
+1. [Objects and data structures](#Objects-and-data-tructures)
+1. [Error Handling](#Error-Handling)
+
+
+Shortest Rules
+-----------
+
+Phần này không có trong sách, vì đây là list mình tự viết sau khi đọc.
+
+- Do only one thing.
+- Don't repeat yourself (Use pattern insteads)
+
+
+
+Notations
+----
+
+Code | Stand for
+----------|---------------
+SVC | Source Version Control
+TDD | Test Driven Development
+3DP | Third-party (Code/library...)
+
+
+
+Clean Code
+----
+
+    TODO: đọc lại và update phần này
+
+
+
+Meaningful Names
+----
+
+    TODO: đọc lại và update phần này
+
+
+Functions
+----
+
+- Về các hàm triad, theo cách nghĩ như trong sách thì các hàm trong OpenCV (với 4, 5, 6… tham số phải nói là rất tệ).
+
+- **Do one thing**.
+
+- Rất nhiều hàm trong C++ STL cũng vi phạm các luật trong này.
+
+- **Exception over Error Code**, thêm một Exception dễ hơn là thêm một Error Code mới.
+
+- Rất khó để tuân theo toàn bộ các quy tắc này (và mình cũng muốn được đọc 1 source hoàn chỉnh tuân theo các quy tắc)
+
+- DRY (Don’t repeat yourself)  and WET (write everything twice or We enjoy typing.)
+
+- Có cảm giác rằng nếu tuân theo nghiêm túc các rule trong chương 3, mình sẽ phải tìm hiểu về _64k functions limitation_ trong android
+
+
+Comments
+----
+
+> Comments are always failures.
+
+- Quên Check Style và javaDoc đi
+
+- SVC giải quyết vấn đề log commnent, và rất nhiều vấn đề khác mà ngày xưa người ta phải dùng comment để hỗ trợ
+
+- Luôn phải xóa bỏ code hỏng đi, thay vì comment rồi… để đó.
+
+
+Formatting
+----
+
+- Chương này không có gì đặc biệt lắm. Vì phần lớn các quy tắc của mình đã khá giống sách rồi, chỉ cần phải làm một việc là thiết kế một bộ rules chặt chẽ rồi sử dụng trong Eclipse thôi.
+
+
+Object and Data Structures
+----
+
+- Một câu hỏi hay ngay từ đầu chương. Tại sao phải có getter và setter cho tất cả các biến.
+
+- **Sự khác nhau giữa Object và Data Structure**.
+
+- Học lại mẫu Visitor để hiểu được cái ví dụ ở trang 127 về Shape và Geometry.
+
+- Procedural code (code using data structures) makes it easy to add new functions without changing the existing data structures. OO code, on the other hand, makes it easy to add new classes without changing existing functions.
+
+- **Talk to friends, not to strangers**. Tuân theo luật này thì phải coi lại mớ hàm builder liên tục trong Android  rồi. Thật sự rất khó để cân bằng mọi thứ.
+
+
+Error Handling
+----
+
+- :x: return null, pass null.
+- Không nên trả về  error code. hay vào đó nên sử dụng exception, dễ import package, không cần phải define lại một interface hay một class khác để chứa các error code.
+- Mình không nhớ là đã học qua **Special Case Pattern**.
+
+````
+Học Special Case Pattern để bắt lỗi.
+````
+
+- Chú ý về **cái giá của checked exception**. Điểm khác nhau giữa C# và Java giữa việc bắt các Exception này.
+- Viết try-catch block trước khi viết natural-flow.
+- Tách biệt natural-flow với special-flow (error handling).
+- Viết test case trước, cố gắng xác định tất cả các lỗi có thể gặp.
+
+Boundaries
+----
+
+- Bọc thrird-party code trong một thư viện của riêng mình, sử dụng *Adapter Pattern* dể convert 3d-party API to internal API, đồng thời hạn chế sự phụ thuộc vào 3d-party library (Internal code chỉ phải thay đổi khi Requiment thay đổi - **Single Responsibility Principle**).
+- Viết test case để biết cái 3d-party library nó làm gì, được gì và có lỗi gì không. Trong trường hợp cái library đó update hay upgrade thì dùng chính test cases đã viết để kiểm tra lại.
+
+Unit Tests
+----
+
+- **Test Driven Development**, thuật ngữ này được nhắc đến rất nhiều trong sách, và  mình chỉ mơ hồ biêt về nó. Cần tìm hiểu!
+- 3 laws of TDD. Lại một cuốn sách nữa của Martin.
+
+> Test code is just as important as production code.
+
+- Có nhiều pattern nằm ngoài bộ 23 pattern của GOF. Không, phải nói là có rất nhiều!

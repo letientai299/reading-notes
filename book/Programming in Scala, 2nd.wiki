@@ -1,0 +1,36 @@
+- Start date: 2016-04-20
+- [X] Chapter 1: Done 2016-04-20
+- [X] Chapter 2: Done 2016-04-20
+- [X] Chapter 3: done 2016-04-21
+- [X] Chapter 4
+- [X] Chapter 5
+- [X] Chapter 6: done 2016-05-01
+- [X] Chapter 7: done 2016-05-01
+- [X] Chapter 8: done 2016-05-02
+- [X] Chapter 9: done 2016-05-02
+- [X] Chapter 10: done 2016-05-07
+- [X] Chapter 11: done 2016-05-07
+- [X] Chapter 12: done 2016-05-07
+- [X] Chapter 13: done 2016-05-10
+- [X] Chapter 14: done 2016-05-10
+- [X] Chapter 15: done 2016-05-14
+- [X] Chapter 16: done 2016-05-15
+- [X] Chapter 17: done 2016-05-15
+- [X] Chapter 18: done 2016-05-15, but keep the DSL for Circuit Simulation.
+- [X] Chapter 19: done 2016-05-15
+- [X] Chapter 20: done 2016-05-15
+- [X] Chapter 21: done 2016-05-16. Require less, provide more. That how type variance in Scala works.
+- [X] Chapter 22: done 2016-05-16. Worth to read again. This provides how List and ListBuffer had been designed to provide purity and efficiency.
+- [X] Chapter 23: done 2016-05-17
+- [ ] Chapter 24: I don't understand 24.11 yet.
+- [ ] Chapter 25: done, but don't remember the date.
+- [ ] Chapter 26: same with 25.
+- [ ] Chapter 27: same with 26.
+- [ ] Chapter 28: done. 2016-06-11. Not understand fully. I also got the feeling of Scala code is hard to read.
+- [ ] Chapter 29: 2016-06-11. Too complicate to understand for now.
+- [ ] Chapter 30
+- [ ] Chapter 31: Ignored.
+- [ ] Chapter 32: done, but nearly skip all of the section 32.6. This chapter worth read more careful again as it discuss about design and implement concurrent system.
+- [ ] Chapter 33
+- [ ] Chapter 34
+- [ ] Chapter 35

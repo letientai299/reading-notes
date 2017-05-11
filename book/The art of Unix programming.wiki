@@ -1,0 +1,41 @@
+= The Art of Unix Programming =
+_by Eric Steven Raymond, 2003_
+
+I) [.] Context
+  1. [X] Philosophy: 2016-05-01
+  2. [ ] History
+  3. [ ] Contrasts
+III) [ ] Design
+  4. [ ] Modularity
+  5. [ ] Textuality
+  6. [ ] Transparency
+  7. [ ] Multiprogramming
+  8. [ ] Minilanguages
+  9. [ ] Generation
+  10. [ ] Configuration
+  11. [ ] Interfaces
+  12. [ ] Optimization
+  13. [ ] Complexity
+IV) [ ] Implementation
+  14. [ ] Languages
+  15. [ ] Tools
+  16. [ ] Reuse
+V) [ ] Community
+  17. [ ] Portability
+  18. [ ] Documentation
+  19. [ ] Open source
+  20. [ ] Future
+A) [ ] Glossary of Abbreviations
+B) [ ] References
+C) [ ] Contributors
+D) [ ] Rootless Root
+  - [ ] Editor's Introduction
+  - [ ] Master Foo and the Ten Thousand Lines.
+  - [ ] Master Foo and the Script Kiddie
+  - [ ] Master Foo Discourses on the Two Paths
+  - [ ] Master Foo and the Methodologists
+  - [ ] Master Foo Discourses on the Graphical User Interface
+  - [ ] Master Foo and the Unix Zealot
+  - [ ] Master Foo Discourses on the Unix-Nature
+  - [ ] Master Foo and the End User
+

@@ -1,0 +1,48 @@
+= Algorithm  =
+- [X] The algorithm design manual 2ed
+
+
+= Java =
+- [X] Java in a nut shell
+- [X] Java 8 lambda by Richard Warburton.
+- [.] [[Beginning Java EE 7]]
+- [X] [[Effective Java 2nd]]
+- [.] [[Java-performance-the-definitive-guide]]
+
+
+= Programming =
+- [ ] [[Clean code]]
+- [ ] Clean Coder
+- [ ] [[The pragmatic programmer]]. *Not have the book yet*.
+
+
+= Scala =
+- [.] [[Functional Programming in Scala]]:
+- [.] [[Programming in Scala, 2nd]].
+
+
+= Unix =
+- [ ] [[Practical Vim]]
+- [ ] [[The Linux Command Line, 2nd, William E. Shotts, Jr]].
+- [ ] [[The art of Unix programming]].
+
+
+= Database  =
+- [.] [[NoSQL Databases - Christof Strauch]]
+- [.] [[NoSQL for mere mortals - Dan Sullivan - 2015]]
+
+
+= OS =
+- [.] [[Operating System Concepts - Silberschatz - 9th - 2012]]
+
+
+= Cloud =
+- [ ] [[Google - Site Reliability Engineering]]
+
+
+= Network =
+- [ ] [[Computer networks - Tanenbaum - 5th]]
+
+= C =
+- [X] [[21st century C - 2nd]]
+- [ ] [[The C programming language - 2nd]]

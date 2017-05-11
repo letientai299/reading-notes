@@ -1,0 +1,654 @@
+- [X] Introduction
+
+--------------------------------------------------------------------------------
+
+- [X] Chapter 1: Java EE 7 at a Glance
+  - [X] Understanding Java EE
+    - [X] Architecture
+    - [X] Components
+    - [X] Containers
+    - [X] Services
+    - [X] Network Protocols
+    - [X] Packaging
+    - [X] Annotations and Deployment Descriptors
+    - [X] Standards
+      - [X] JCP
+    - [X] Portable
+    - [X] Programming Model
+  - [X] Java Standard Edition 7
+    - [X] String Case
+    - [X] Diamond
+    - [X] Try-with-Resources
+    - [X] Multicatch Exception
+    - [X] NIO.2
+  - [X] Java EE Specifications Overview
+    - [X] A Brief History of Java EE
+    - [X] Pruning
+    - [X] Java EE 7 Specifications
+    - [X] Web Profile 7 Specifications
+  - [X] The CD-BookStore Application
+  - [X] Summary
+
+--------------------------------------------------------------------------------
+
+- [X] Chapter 2: Context and Dependency Injection
+  - [X] Understanding Beans
+    - [X] Dependency Injection
+    - [X] Life-Cycle Management
+    - [X] Scopes and Context
+    - [X] Interception
+    - [X] Loose Coupling and Strong Typing
+    - [X] Deployment Descriptor
+  - [X] CDI Specifications Overview
+    - [X] A Brief History of CDI Specifications
+    - [X] What's New in CDI 1.1?
+    - [X] Reference Implementation
+  - [X] Writing a CDI Bean
+    - [X] Anatomy of a CDI Bean
+    - [X] Dependency Injection
+    - [X] @Inject
+    - [X] Injection Points
+    - [X] Default Injection
+    - [X] Qualifiers
+    - [X] Qualifiers with Members
+    - [X] Multiple Qualifiers
+    - [X] Alternatives
+    - [X] Producers
+    - [X] InjectionPoint API
+    - [X] Disposers
+    - [X] Scopes
+    - [X] Conversation
+    - [X] Beans in Expression Language
+  - [X] Interceptors
+    - [X] Target Class Interceptors
+    - [X] Class Interceptors
+    - [X] Life-Cycle Interceptor
+    - [X] Chaining and Excluding Interceptors
+    - [X] Interceptor Binding
+    - [X] Prioritizing Interceptors Binding
+  - [X] Decorators
+  - [X] Events
+  - [X] Putting It All Together
+    - [X] Writing the Book and BookService Classes
+    - [X] Writing the NumberGenerator Classes
+    - [X] Writing the Qualifiers
+    - [X] Writing the Logger
+    - [X] Writing the Main Class
+    - [X] Trigger CDI with beans.xml
+    - [X] Compiling and Executing with Maven
+    - [X] Running the Main Class
+    - [X] Writing the BookServiceIT Class
+    - [X] Enabling Alternatives and Interceptors in beans.xml for Integration Testing
+    - [X] Running the Integration Test
+  - [X] Summary
+
+--------------------------------------------------------------------------------
+
+- [X] Chapter 3: Bean Validation
+  - [X] Understanding Constraints and Validation
+    - [X] Application
+    - [X] Database
+    - [X] Client
+    - [X] Interoperability
+  - [X] Bean Validation Specification Overview
+    - [X] A Brief History of Bean Validation
+    - [X] What's New in Bean Validation 1.1?
+    - [X] Reference Implementation
+  - [X] Writing Constraints
+    - [X] Anatomy of a Constraint
+    - [X] Constraint Annotation
+    - [X] Constraint Implementation
+    - [X] Applying a Constraint
+    - [X] Built-In Constraints
+    - [X] Defining Your Own Constraints
+    - [X] Constraint Composition
+    - [X] Generic Constraint
+    - [X] Multiple Constraints for the Same Target
+    - [X] Class-Level Constraint
+    - [X] Method-Level Constraint
+    - [X] Constraint Inheritance
+    - [X] Messages
+    - [X] ConstraintValidator Context
+    - [X] Groups
+    - [X] Deployment Descriptors
+  - [X] Validating Constraints
+    - [X] Validation APIs
+    - [X] Validator
+    - [X] ConstraintViolation
+    - [X] Obtaining a Validator
+    - [X] Validating Beans
+    - [X] Validating Properties
+    - [X] Validating Values
+    - [X] Validating Methods
+    - [X] Validating Groups
+  - [X] Putting It All Together
+    - [X] Writing the Customer Bean
+    - [X] Writing the Address Bean
+    - [X] Writing the @Email Constraint
+    - [X] Writing the @ZipCode Constraint
+    - [X] Writing the CustomerIT and AddressIT Integration Tests
+    - [X] Compiling and Testing with Maven
+  - [X] Summary
+
+--------------------------------------------------------------------------------
+
+- [X] Chapter 4: Java Persistence API
+  - [X] Understanding Entities
+    - [X] Anatomy of an Entity
+    - [X] Object-Relational Mapping
+    - [X] Querying Entities
+    - [X] Persistence Unit
+    - [X] Entity Life Cycle and Callbacks
+    - [X] Integration with Bean Validation
+  - [X] JPA Specification Overview
+    - [X] A Brief History of JPA
+    - [X] What's New in JPA 2.1?
+    - [X] Reference Implementation
+  - [X] Putting It all Together
+    - [X] Writing the Book Entity
+    - [X] Writing the Main Class
+    - [X] Writing the BookIT Integration Test
+    - [X] Writing the Persistence Unit
+    - [X] Writing an SQL Script to Load Data
+    - [X] Compiling and Testing with Maven
+    - [X] Running the Main Class with Derby
+    - [X] Checking the Generated Schema
+  - [X] Summary
+
+--------------------------------------------------------------------------------
+
+- [.] Chapter 5: Object-Relational Mapping
+  - [O] Elementary Mapping
+    - [X] Tables
+      - `configuration-by-exception`?
+      - [X] @Table
+        - Map class with table with different name.
+      - [X] @SecondaryTable
+    - [X] Primary Keys
+      - [X] @Id and @GeneratedValue
+      - [X] Composite Primary Keys
+        - [X] @EmbeddedId
+        - [X] @IdClass
+          - More error-prone. Have code duplication.
+    - [ ] Attributes
+      - [X] @Basic
+      - [X] @Column
+      - [X] @Temporal
+      - [X] @Transient
+      - [X] @Enumerated
+    - [X] Access Type
+    - [X] Collection of Basic Types
+    - [X] Map of Basic Types
+  - [X] Mapping with XML
+  - Skipp the rest of the chapter due lack of practical exercise.
+  - [ ] Embeddables
+    - [ ] Access Type of an Embeddable Class
+  - [ ] Relationship Mapping
+    - [ ] Relationships in Relational Databases
+    - [ ] Entity Relationships
+      - [ ] Unidirectional and Bidirectional
+      - [ ] @OneToOne Unidirectional
+      - [ ] @OneToMany Unidirectional
+      - [ ] @ManyToMany Bidirectional
+    - [ ] Fetching Relationships
+    - [ ] Ordering Relationships
+      - [ ] @OrderBy
+      - [ ] @OrderColumn
+  - [ ] Inheritance Mapping
+    - [ ] Inheritance Strategies
+      - [ ] Single-Table-per-Class Hierarchy Strategy
+      - [ ] Joined-Subclass Strategy
+      - [ ] Table-per-Concrete-Class Strategy
+      - [ ] Overriding Attributes
+    - [ ] Type of Classes in the Inheritance Hierarchy
+      - [ ] Abstract Entity
+      - [ ] Nonentity
+      - [ ] Mapped Superclass
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [X] Chapter 6: Managing Persistent Objects
+  - [X] Entity Manager
+    - [X] Obtaining an Entity Manager
+    - [X] Persistence Context
+    - [X] Manipulating Entities
+      - [X] Persisting an Entity
+      - [X] Finding by ID
+      - [X] Removing an Entity
+      - [X] Orphan Removal
+      - [X] Synchronizing with the Database
+        - [X] Flushing an Entity
+          - Explicit `flush` should be used carefully.
+        - [X] Refreshing an Entity
+      - [X] Content of the Persistence Context
+        - [X] Contains
+        - [X] Clear and Detach
+      - [X] Merging an Entity
+      - [X] Updating an Entity
+      - [X] Cascading Events:
+        - Cascade helps to reduce code when entities have relation ship.
+  - [X] JPQL
+    - Hard to understand without any practical exercises.
+    - [X] Select
+    - [X] From
+    - [X] Where
+      - [X] Binding Parameters
+      - [X] Subqueries
+    - [X] Order By
+    - [X] Group By and Having
+    - [X] Bulk Delete
+    - [X] Bulk Update
+  - [X] Queries
+    - [X] Dynamic Queries
+    - [X] Named Queries
+    - [X] Criteria API (or Object-Oriented Queries)
+      - [X] Type-Safe Criteria API
+    - [X] Native Queries
+    - [X] Stored Procedure Queries
+  - [X] Cache API
+  - [X] Concurrency
+    - [X] Versioning
+    - [X] Optimistic Locking
+    - [X] Pessimistic Locking
+  - [X] Entity Life Cycle
+  - [X] Callbacks
+  - [X] Listeners
+  - [X] Summary
+
+--------------------------------------------------------------------------------
+
+- [o] Chapter 7: Enterprise JavaBeans
+  - [X] Understanding Enterprise JavaBeans
+    - [X] Types of EJBs
+    - [X] Process and Embedded Container
+    - [X] Services Given by the Container
+    - [X] EJB Lite
+  - [X] EJB Specification Overview
+    - [X] A Brief History of the EJB Specification
+    - [X] What's in EJB 3.2?
+    - [X] Reference Implementation
+  - [ ] Writing Enterprise Java Beans
+    - [ ] Anatomy of an EJB
+      - [ ] Bean Class
+      - [ ] Remote, Local, and No-Interface Views
+      - [ ] Web Services Interface
+      - [ ] Portable JNDI Name
+    - [ ] Stateless Beans
+    - [ ] Stateful Beans
+    - [ ] Singletons
+      - [ ] Startup Initialization
+      - [ ] Chaining Singletons
+      - [ ] Concurrency
+        - [ ] Container-Managed Concurrency
+        - [ ] Bean-Managed Concurrency
+        - [ ] Concurrent Access Timeouts and Not Allowing Concurrency
+    - [ ] Dependency Injection
+    - [ ] Session Context
+    - [ ] Asynchronous Calls
+    - [ ] Deployment Descriptor
+    - [ ] Environment Naming Context
+    - [ ] Packaging
+    - [ ] Deploying an EJB
+  - [ ] Invoking Enterprise Java Beans
+    - [ ] Invoking with Injection
+    - [ ] Invoking with CDI
+    - [ ] Invoking with JNDI
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 8: Callbacks, Timer Service, and Authorization
+  - [ ] Session Beans Life Cycle
+  - [ ] Stateless and Singleton
+  - [ ] Stateful
+  - [ ] Callbacks
+  - [ ] Timer Service
+  - [ ] Calendar-Based Expression
+  - [ ] Declarative Timer Creation
+  - [ ] Programmatic Timer Creation
+  - [ ] Authorization
+  - [ ] Declarative Authorization
+  - [ ] Programmatic Authorization
+  - [ ] Putting It All Together
+  - [ ] Writing the Book Entity
+  - [ ] Writing the BookEJB Stateless Session Bean
+  - [ ] Writing the CDI DatabaseProducer
+  - [ ] Persistence Unit for the BookEJB
+  - [ ] Writing the DatabasePopulator and Defining the Data Source
+  - [ ] Writing the BookEJBIT Integration Test
+  - [ ] Compiling, Testing, and Packaging with Maven
+  - [ ] Deploying on GlassFish
+  - [ ] Writing the Main Class
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 9: Transactions
+  - [ ] Understanding Transactions
+  - [ ] ACID
+  - [ ] Read Conditions
+  - [ ] Transaction Isolation Levels
+  - [ ] JTA Local Transactions
+  - [ ] Distributed Transactions and XA
+  - [ ] Transaction Specifications Overview
+  - [ ] A Brief History of JTA
+  - [ ] What&#8217;s New in JTA 1.2?
+  - [ ] Reference Implementation
+  - [ ] Transaction Support in EJBs
+  - [ ] Container-Managed Transactions
+  - [ ] Marking a CMT for Rollback
+  - [ ] Exceptions and Transactions
+  - [ ] Bean-Managed Transactions
+  - [ ] Transaction Support in Managed Beans
+  - [ ] Exceptions and Transactions
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 10: JavaServer Faces
+  - [ ] Understanding Web Pages
+  - [ ] HTML
+  - [ ] XHTML
+  - [ ] CSS
+  - [ ] DOM
+  - [ ] JavaScript
+  - [ ] Understanding JSF
+  - [ ] FacesServlet
+  - [ ] Pages and Components
+  - [ ] Facelets
+  - [ ] Renderers
+  - [ ] Converters and Validators
+  - [ ] Backing Beans and Navigation
+  - [ ] Expression Language
+  - [ ] Ajax Support
+  - [ ] JSF Specification Overview
+  - [ ] A Brief History of Web Interfaces
+  - [ ] A Brief History of JSF
+  - [ ] What&#8217;s New in JSF 2.2?
+  - [ ] Reference Implementation
+  - [ ] Writing JSF Pages and Components
+  - [ ] Anatomy of a JSF Page
+  - [ ] Header
+  - [ ] Body
+  - [ ] Life Cycle
+  - [ ] Anatomy of JSF Components
+  - [ ] JSF HTML Components Tags
+  - [ ] Commands
+  - [ ] Targets
+  - [ ] Inputs
+  - [ ] Outputs
+  - [ ] Selections
+  - [ ] Sec33
+  - [ ] Graphics
+  - [ ] Grid and Tables
+  - [ ] Error Messages
+  - [ ] Miscellaneous
+  - [ ] Basic Attributes
+  - [ ] JSF Core Tags
+  - [ ] JSF Templating Tags
+  - [ ] JSTL Tags
+  - [ ] Core Actions
+  - [ ] Formatting Actions
+  - [ ] Resource Management
+  - [ ] Implicit Objects
+  - [ ] Composite Components
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 11: Processing and Navigation
+  - [ ] The MVC Pattern
+  - [ ] FacesServlet
+  - [ ] FacesContext
+  - [ ] Faces Config
+  - [ ] Writing Backing Beans
+  - [ ] Anatomy of a Backing Bean
+  - [ ] Scopes
+  - [ ] Life Cycle and Callback Annotations
+  - [ ] Handling Exceptions and Messages
+  - [ ] Bringing JSF and EJBs Together
+  - [ ] Navigation
+  - [ ] Explicit Navigation
+  - [ ] Navigation Rules
+  - [ ] Bookmarkability
+  - [ ] Conversion and Validation
+  - [ ] Converters
+  - [ ] Custom Converters
+  - [ ] Validators
+  - [ ] Custom Validators
+  - [ ] Integration with Bean Validation
+  - [ ] Ajax
+  - [ ] General Concepts
+  - [ ] Support in JSF
+  - [ ] Putting It All Together
+  - [ ] Writing the Book Entity
+  - [ ] Writing the BookEJB
+  - [ ] Writing the BookController Backing Bean
+  - [ ] Writing the layout.xhtml Template
+  - [ ] Writing the newBook.xhtml Page
+  - [ ] Writing the viewBook.xhtml Page
+  - [ ] Compiling and Packaging with Maven
+  - [ ] Deploying on GlassFish
+  - [ ] Running the Example
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 12: XML and JSon Processing
+  - [ ] Understanding XML
+  - [ ] XML Document
+  - [ ] Validating with XML Schema
+  - [ ] Parsing with SAX and DOM
+  - [ ] DOM
+  - [ ] SAX
+  - [ ] Querying with XPath
+  - [ ] Transforming with XSLT
+  - [ ] XML Specifications Overview
+  - [ ] A Brief History of XML Specifications
+  - [ ] XML Specifications in Java
+  - [ ] Reference Implementations
+  - [ ] Java Architecture for XML Processing
+  - [ ] Configuring JAXP
+  - [ ] JAXP with SAX
+  - [ ] JAXP with DOM
+  - [ ] JAXP with XSLT
+  - [ ] Java Architecture for XML Binding
+  - [ ] Binding
+  - [ ] Annotations
+  - [ ] Understanding JSON
+  - [ ] JSON Document
+  - [ ] JSON Specifications Overview
+  - [ ] JSON-P
+  - [ ] Reference Implementation
+  - [ ] JSON Processing
+  - [ ] Building JSON
+  - [ ] Parsing JSON
+  - [ ] Generating JSON
+  - [ ] Putting It All Together
+  - [ ] Writing the CreditCard Class
+  - [ ] Writing the CreditCardXMLTest Unit Test
+  - [ ] Writing the CreditCardJSonTest Unit Test
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 13: Messaging
+  - [ ] Understanding Messaging
+  - [ ] Point-to-Point
+  - [ ] Publish-Subscribe
+  - [ ] Administered Objects
+  - [ ] Message-Driven Beans
+  - [ ] Messaging Specifications Overview
+  - [ ] A Brief History of Messaging
+  - [ ] What&#8217;s New in JMS 2.0?
+  - [ ] What&#8217;s New in EJB 3.2?
+  - [ ] Reference Implementation
+  - [ ] Java Messaging Service API
+  - [ ] Classic API
+  - [ ] ConnectionFactory
+  - [ ] Destination
+  - [ ] Connection
+  - [ ] Session
+  - [ ] Messages
+  - [ ] Header
+  - [ ] Properties
+  - [ ] Body
+  - [ ] Sending and Receiving a Message with Classic API
+  - [ ] Simplified API
+  - [ ] JMSContext
+  - [ ] JMSProducer
+  - [ ] JMSConsumer
+  - [ ] Writing Message Producers
+  - [ ] Producing a Message outside a Container
+  - [ ] Producing a Message inside a Container
+  - [ ] Producing a Message inside a Container with CDI
+  - [ ] Writing Message Consumers
+  - [ ] Synchronous Delivery
+  - [ ] Asynchronous Delivery
+  - [ ] Reliability Mechanisms
+  - [ ] Filtering messages
+  - [ ] Setting Message Time-to-Live
+  - [ ] Specifying Message Persistence
+  - [ ] Controlling Acknowledgment
+  - [ ] Creating Durable Consumers
+  - [ ] Setting Priorities
+  - [ ] Writing Message-Driven Beans
+  - [ ] Anatomy of an MDB
+  - [ ] @MessageDriven
+  - [ ] @ActivationConfigProperty
+  - [ ] Dependencies Injection
+  - [ ] MDB Context
+  - [ ] Life Cycle and Callback Annotations
+  - [ ] MDB as a Consumer
+  - [ ] MDB as a Producer
+  - [ ] Transactions
+  - [ ] Handling Exceptions
+  - [ ] Putting It All Together
+  - [ ] Writing the OrderDTO
+  - [ ] Writing the OrderProducer
+  - [ ] Writing the OrderConsumer
+  - [ ] Writing the ExpensiveOrderMDB
+  - [ ] Compiling and Packaging with Maven
+  - [ ] Creating the Administered Objects
+  - [ ] Deploying the MDB on GlassFish
+  - [ ] Running the Example
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 14: SOAP Web Services
+  - [ ] Understanding SOAP Web Services
+  - [ ] XML
+  - [ ] WSDL
+  - [ ] SOAP
+  - [ ] UDDI
+  - [ ] Transport Protocol
+  - [ ] SOAP Web Services Specifications Overview
+  - [ ] A Brief History of SOAP Web Services Specifications
+  - [ ] SOAP Web Services Related Specifications
+  - [ ] JAX-WS 2.2a
+  - [ ] Web Services 1.3
+  - [ ] WS-Metadata 2.3
+  - [ ] What&#8217;s New in SOAP Web Services Specifications?
+  - [ ] Reference Implementation
+  - [ ] Writing SOAP Web Services
+  - [ ] Anatomy of a SOAP Web Service
+  - [ ] SOAP Web Service Endpoints
+  - [ ] WSDL Mapping
+  - [ ] @WebService
+  - [ ] @WebMethod
+  - [ ] @WebResult
+  - [ ] @WebParam
+  - [ ] @OneWay
+  - [ ] @SOAPBinding
+  - [ ] Putting the Mapping All Together
+  - [ ] Handling Exceptions
+  - [ ] Life Cycle and Callback
+  - [ ] WebServiceContext
+  - [ ] Deployment Descriptor
+  - [ ] Packaging
+  - [ ] Publishing a SOAP Web Service
+  - [ ] Invoking SOAP Web Services
+  - [ ] Anatomy of a SOAP Consumer
+  - [ ] Invoking Programmatically
+  - [ ] Invoking with Injection
+  - [ ] Invoking with CDI
+  - [ ] Putting It All Together
+  - [ ] Writing the CreditCard Class
+  - [ ] Writing the CardValidator SOAP Web Service
+  - [ ] Writing the CardValidatorTest Unit Test
+  - [ ] Writing the CardValidatorIT Integration Test
+  - [ ] Compiling, Testing and Packaging with Maven
+  - [ ] Deploying on GlassFish
+  - [ ] Writing the WebServiceConsumer Class
+  - [ ] Generating Consumer&#8217;s Artifacts and Packaging with Maven
+  - [ ] Running the WebServiceConsumer Class
+  - [ ] Summary
+
+--------------------------------------------------------------------------------
+
+- [ ] Chapter 15: RESTful Web Services
+  - [ ] Understanding RESTful Web Services
+  - [ ] A Web-Browsing Experience
+  - [ ] Resources and URIs
+  - [ ] Representations
+  - [ ] Addressability
+  - [ ] Connectedness
+  - [ ] Uniform Interface
+  - [ ] Statelessness
+  - [ ] HTTP
+  - [ ] Request and Response
+  - [ ] Headers
+  - [ ] HTTP Methods
+  - [ ] GET
+  - [ ] POST
+  - [ ] PUT
+  - [ ] DELETE
+  - [ ] Others
+  - [ ] Content Negotiation
+  - [ ] Content Types
+  - [ ] Status Codes
+  - [ ] Caching and Conditional Requests
+  - [ ] From the Web to Web Services
+  - [ ] WADL
+  - [ ] RESTful Web Services Specifications Overview
+  - [ ] A Brief History of REST
+  - [ ] Java API for RESTful Web Services
+  - [ ] What&#8217;s New in JAX-RS 2.0?
+  - [ ] Reference Implementation
+  - [ ] Writing RESTful Web Services
+  - [ ] Anatomy of a RESTful Web Service
+  - [ ] CRUD Operations on a RESTful Web Service
+  - [ ] URI Definition and Binding URIs
+  - [ ] Extracting Parameters
+  - [ ] Consuming and Producing Content Types
+  - [ ] Returned Types
+  - [ ] HTTP Method Matching
+  - [ ] Building URIs
+  - [ ] Contextual Information
+  - [ ] Entity Provider
+  - [ ] Handling Exceptions
+  - [ ] Life Cycle and Callback
+  - [ ] Packaging
+  - [ ] Invoking RESTful Web Services
+  - [ ] The Client API
+  - [ ] Bootstrapping the Client
+  - [ ] Targets and Invocations
+  - [ ] Consuming Responses
+  - [ ] Anatomy of a REST Consumer
+  - [ ] Putting It All Together
+  - [ ] Writing the Book Entity
+  - [ ] Writing the Books JAXB Bean
+  - [ ] Writing the BookRestService
+  - [ ] Header Class
+  - [ ] Creating a New Book
+  - [ ] Getting a Book by ID
+  - [ ] Getting all the Books
+  - [ ] Deleting a Book
+  - [ ] Configuring JAX-RS
+  - [ ] Compiling and Packaging with Maven
+  - [ ] Deploying on GlassFish
+  - [ ] WADL
+  - [ ] Writing the BookRestServiceIT Integration Test
+  - [ ] Summary
