@@ -46,3 +46,6 @@
 = C =
 - [X] [[21st century C - 2nd]]
 - [ ] [[The C programming language - 2nd]]
+
+= Lisp =
+- [[Practical-Common-Lisp]]

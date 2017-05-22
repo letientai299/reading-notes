@@ -1,0 +1,13 @@
+- Very funny that I'm typing in Vim about a book of Emacs.
+
+- [X] 1. Introduction
+- [ ] 2. The Way of Emacs
+  - I like the way Emacs markdown-mode render the text. Of course, that can only done in the GUI version.
+  - OK, so before Vim, there's Vi, before Vi there's Ed, and before Ed there's something I can remember.
+  - Before Emacs, there's TECO.
+  - Using Emacs require lots of keystrokes compare to Vim. Thus, I prefer the GUI version than using it within Tmux, which adds one more keystore for `C-b`.
+- [ ] 3. First Steps
+- [ ] 4. The Theory of Movement
+- [ ] 5. The Theory of Editing
+- [ ] 6. The Practicals of Emacs
+- [ ] 7. Conclustion

@@ -1,13 +1,34 @@
 - [X] Introduction
 
-- [.] Part 1: Language
+- [o] Part 1: Language
   - [X] 1.  Values, Types, and Operators
   - [X] 2.  Program Structure
     - Constructor function usually has first letter upper case.
-  - [ ] 3.  Functions
-  - [ ] 4.  Data Structures: Objects and Arrays
-  - [ ] 5.  Higher-order Functions
+  - [X] 3.  Functions
+    - The chapter starts with a great quote from Donald Knuth.
+    - Don't define function within a conditional block.
+    - A function that “closes over” some local variables is called a closure.
+    - A simple number theory problem: start with 1, each step, either add 5 or multiply with 3, prove that 15 can never be reached.
+  - [X] 4.  Data Structures: Objects and Arrays
+    - `string`, `number` and `Boolean` are immutable value, not objects
+    - *by a historical accident, typeof null also produces "object"*
+  - [X] 5.  Higher-order Functions
+    - *Confused programmers, in turn, tend to introduce mistakes (bugs)*.
+    - `Array.prototype.map()` won't be called on _missing_ element. It's fine with `undefined` and `null`.
+  - [X] 6.  The Secret Life of Objects
+    - Use prototype-less object to avoid messing with others defined functions.
+    - This is the first time I learn about `get` and `set` keywords in object litteral.
+    - A nice example of Inheritance
+    {{{javascript
+    function RTextCell(text) {
+      TextCell.call(this, text); // Inheritance? Very nice.
+    }
+
+    RTextCell.prototype = Object.create(TextCell.prototype);
+    }}}
   - [ ] 6.  The Secret Life of Objects
+    - *when a function isn’t called as a method, this will refer to the global object.*.
+    -
   - [ ] 7.  Project: Electronic Life
   - [ ] 8.  Bugs and Error Handling
   - [ ] 9.  Regular Expressions
