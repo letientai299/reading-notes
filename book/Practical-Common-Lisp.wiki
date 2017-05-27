@@ -1,12 +1,18 @@
 The book is available online at: http://www.gigamonkeys.com/book/
 
-- [ ] 1. Introduction: Why Lisp?
+- [X] 1. Introduction: Why Lisp?
   - Quite a lot of stories, but they make me feel more interesting anyway.
-  - [ ] Why Lisp?
+  - [X] Why Lisp?
     - *You can add the feature into the language yourself*
     - The motto: "The programmable programming language"
-    -
-- [ ] 2. Lather, Rinse, Repeat: A Tour of the REPL
+  - [X] Where It Began
+  - [X] Who this book is for
+- [O] 2. Lather, Rinse, Repeat: A Tour of the REPL
+  - [X] Choosing aq Lisp Implementation
+  - [X] Getting Up and Running with Lisp in a Box
+  - [X] Free your mind: Interactive Programming
+  - [X] Experimenting in the REPL
+  - [ ] "Hello world", Lisp Style
 - [ ] 3. Practical: A Simple Database
 - [ ] 4. Syntax and Semantics
 - [ ] 5. Functions
