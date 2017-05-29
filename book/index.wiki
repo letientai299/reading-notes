@@ -8,6 +8,7 @@
 - [.] [[Beginning Java EE 7]]
 - [X] [[Effective Java 2nd]]
 - [.] [[Java-performance-the-definitive-guide]]
+- [ ] [[Spring-in-Action-4th]]
 
 
 = Programming =
