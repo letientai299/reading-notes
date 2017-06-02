@@ -1,0 +1,4 @@
+Link: https://javadevguy.wordpress.com/2017/05/14/the-genius-of-the-law-of-demeter/
+
+- The law: don't talk to stranger.
+- This article answers my old concern: how fluent API playing with the Law.

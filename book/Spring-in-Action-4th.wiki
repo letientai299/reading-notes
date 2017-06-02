@@ -2,349 +2,362 @@
 - [X] Acknowledgements
 - [X] About this book
 
-- [ ] Part 1 Core Spring
+- [X] Part 1 Core Spring
   - Primary features are DI and AOP.
 
-- [.] 1. Springing into action
-  - [o] 1.1. Simplifying Java development
+- [X] 1. Springing into action
+  - [X] 1.1. Simplifying Java development
     - [X] 1.1.1. Unleashing the power of POJOs
     - [X] 1.1.2. Injecting dependencies
     - [X] 1.1.3. Applying aspects
       - ~Still don't figure out how to use AspectJ without XML.~
       - Now I know how. Add a `@PointCut` method and use it as the id for `@Before` and `@After`.
-    - [ ] 1.1.4. Eliminating boilerplate code with templates
-  - [ ] 1.2. Containing your beans
-    - [ ] 1.2.1. Working with an application context
-    - [ ] 1.2.2. A bean&#8217;s life
-  - [ ] 1.3. Surveying the Spring landscape
-    - [ ] 1.3.1. Spring modules
-    - [ ] 1.3.2. The Spring portfolio
-  - [ ] 1.4. What&#8217;s new in Spring
-    - [ ] 1.4.1. What was new in Spring 3.1?
-    - [ ] 1.4.2. What was new in Spring 3.2?
-    - [ ] 1.4.3. What&#8217;s new in Spring 4.0?
-  - [ ] 1.5. Summary
+    - [X] 1.1.4. Eliminating boilerplate code with templates
+  - [X] 1.2. Containing your beans
+    - [X] 1.2.1. Working with an application context
+    - [X] 1.2.2. A bean's life
+  - [X] 1.3. Surveying the Spring landscape
+    - [X] 1.3.1. Spring modules
+    - [X] 1.3.2. The Spring portfolio
+  - [X] 1.4. What's new in Spring
+    - [X] 1.4.1. What was new in Spring 3.1?
+    - [X] 1.4.2. What was new in Spring 3.2?
+    - [X] 1.4.3. What's new in Spring 4.0?
+  - [X] 1.5. Summary
 
-- [ ] 2. Wiring beans
-- [ ] 2.1. Exploring Spring&#8217;s configuration options
-- [ ] 2.2. Automatically wiring beans
-- [ ] 2.2.1. Creating discoverable beans
-- [ ] 2.2.2. Naming a component-scanned bean
-- [ ] 2.2.3. Setting a base package for component scanning
-- [ ] 2.2.4. Annotating beans to be automatically wired
-- [ ] 2.2.5. Verifying automatic configuration
-- [ ] 2.3. Wiring beans with Java
-- [ ] 2.3.1. Creating a configuration class
-- [ ] 2.3.2. Declaring a simple bean
-- [ ] 2.3.3. Injecting with JavaConfig
-- [ ] 2.4. Wiring beans with XML
-- [ ] 2.4.1. Creating an XML configuration specification
-- [ ] 2.4.2. Declaring a simple &lt;bean&gt;
-- [ ] 2.4.3. Initializing a bean with constructor injection
-- [ ] 2.4.4. Setting properties
-- [ ] 2.5. Importing and mixing configurations
-- [ ] 2.5.1. Referencing XML configuration in JavaConfig
-- [ ] 2.5.2. Referencing JavaConfig in XML configuration
-- [ ] 2.6. Summary
+- [X] 2. Wiring beans
+  - [X] 2.1. Exploring Spring's configuration options
+  - [X] 2.2. Automatically wiring beans
+    - Should lean on Automatic configuration.
+    - [X] 2.2.1. Creating discoverable beans
+      - Follow until listing 2.5, just some simple line of code, and we have DI unit test. Very nice.
+    - [X] 2.2.2. Naming a component-scanned bean
+      - `@Named` is not only a poor name, it also requires addtional dependency, so I would prefer `@Component`also.
+    - [X] 2.2.3. Setting a base package for component scanning
+    - [X] 2.2.4. Annotating beans to be automatically wired
+    - [X] 2.2.5. Verifying automatic configuration
+  - [X] 2.3. Wiring beans with Java
+    - [X] 2.3.1. Creating a configuration class
+    - [X] 2.3.2. Declaring a simple bean
+    - [X] 2.3.3. Injecting with JavaConfig
+  - [X] 2.4. Wiring beans with XML
+    - [X] 2.4.1. Creating an XML configuration specification
+    - [X] 2.4.2. Declaring a simple *bean*
+    - [X] 2.4.3. Initializing a bean with constructor injection
+    - [X] 2.4.4. Setting properties
+  - [X] 2.5. Importing and mixing configurations
+    - [X] 2.5.1. Referencing XML configuration in JavaConfig
+    - [X] 2.5.2. Referencing JavaConfig in XML configuration
+  - [X] 2.6. Summary
 
-- [ ] 3. Advanced wiring
-- [ ] 3.1. Environments and profiles
-- [ ] 3.1.1. Configuring profile beans
-- [ ] 3.1.2. Activating profiles
-- [ ] 3.2. Conditional beans
-- [ ] 3.3. Addressing ambiguity in autowiring
-- [ ] 3.3.1. Designating a primary bean
-- [ ] 3.3.2. Qualifying autowired beans
-- [ ] 3.4. Scoping beans
-- [ ] 3.4.1. Working with request and session scope
-- [ ] 3.4.2. Declaring scoped proxies in XML
-- [ ] 3.5. Runtime value injection
-- [ ] 3.5.1. Injecting external values
-- [ ] 3.5.2. Wiring with the Spring Expression Language
-- [ ] 3.6. Summary
+- [X] 3. Advanced wiring
+  - [X] 3.1. Environments and profiles
+    - [X] 3.1.1. Configuring profile beans
+    - [X] 3.1.2. Activating profiles
+  - [X] 3.2. Conditional beans
+  - [X] 3.3. Addressing ambiguity in autowiring
+    - [X] 3.3.1. Designating a primary bean
+    - [X] 3.3.2. Qualifying autowired beans
+      - This isn't a fun thing to do. Too many conditions and that makes DI become useless.
+  - [X] 3.4. Scoping beans
+    - [X] 3.4.1. Working with request and session scope
+      - Use `proxyMode` to work between beans that have different scope.
+    - [X] 3.4.2. Declaring scoped proxies in XML
+  - [X] 3.5. Runtime value injection
+    - [X] 3.5.1. Injecting external values
+      - New gems: `Environment` and `PropertySource`
+    - [X] 3.5.2. Wiring with the Spring Expression Language
+  - [X] 3.6. Summary
 
-- [ ] 4. Aspect-oriented Spring
-- [ ] 4.1. What is aspect-oriented programming?
-- [ ] 4.1.1. Defining AOP terminology
-- [ ] 4.1.2. Spring&#8217;s AOP support
-- [ ] 4.2. Selecting join points with pointcuts
-- [ ] 4.2.1. Writing pointcuts
-- [ ] 4.2.2. Selecting beans in pointcuts
-- [ ] 4.3. Creating annotated aspects
-- [ ] 4.3.1. Defining an aspect
-- [ ] 4.3.2. Creating around advice
-- [ ] 4.3.3. Handling parameters in advice
-- [ ] 4.3.4. Annotating introductions
-- [ ] 4.4. Declaring aspects in XML
-- [ ] 4.4.1. Declaring before and after advice
-- [ ] 4.4.2. Declaring around advice
-- [ ] 4.4.3. Passing parameters to advice
-- [ ] 4.4.4. Introducing new functionality with aspects
-- [ ] 4.5. Injecting AspectJ aspects
-- [ ] 4.6. Summary
+- [X] 4. Aspect-oriented Spring
+  - [X] 4.1. What is aspect-oriented programming?
+    - [X] 4.1.1. Defining AOP terminology
+    - [X] 4.1.2. Spring's AOP support
+  - [X] 4.2. Selecting join points with pointcuts
+    - [X] 4.2.1. Writing pointcuts
+    - [X] 4.2.2. Selecting beans in pointcuts
+  - [X] 4.3. Creating annotated aspects
+    - [X] 4.3.1. Defining an aspect
+    - [X] 4.3.2. Creating around advice
+    - [X] 4.3.3. Handling parameters in advice
+    - [X] 4.3.4. Annotating introductions
+  - [X] 4.4. Declaring aspects in XML
+    - [X] 4.4.1. Declaring before and after advice
+    - [X] 4.4.2. Declaring around advice
+    - [X] 4.4.3. Passing parameters to advice
+    - [X] 4.4.4. Introducing new functionality with aspects
+  - [X] 4.5. Injecting AspectJ aspects
+  - [X] 4.6. Summary
+
 - [ ] Part 2 Spring on the Web
 
-- [ ] 5. Building Spring web applications
-- [ ] 5.1. Getting started with Spring MVC
-- [ ] 5.1.1. Following the life of a request
-- [ ] 5.1.2. Setting up Spring MVC
-- [ ] 5.1.3. Introducing the Spittr application
-- [ ] 5.2. Writing a simple controller
-- [ ] 5.2.1. Testing the controller
-- [ ] 5.2.2. Defining class-level request handling
-- [ ] 5.2.3. Passing model data to the view
-- [ ] 5.3. Accepting request input
-- [ ] 5.3.1. Taking query parameters
-- [ ] 5.3.2. Taking input via path parameters
-- [ ] 5.4. Processing forms
-- [ ] 5.4.1. Writing a form-handling controller
-- [ ] 5.4.2. Validating forms
-- [ ] 5.5. Summary
+- [X] 5. Building Spring web applications
+  - [X] 5.1. Getting started with Spring MVC
+    - [X] 5.1.1. Following the life of a request
+    - [X] 5.1.2. Setting up Spring MVC
+      - Good. So now with Servlet 3.0 I could say goodbye the `web.xml`.
+    - [X] 5.1.3. Introducing the Spittr application
+  - [X] 5.2. Writing a simple controller
+    - [X] 5.2.1. Testing the controller
+    - [X] 5.2.2. Defining class-level request handling
+    - [X] 5.2.3. Passing model data to the view
+  - [X] 5.3. Accepting request input
+    - [X] 5.3.1. Taking query parameters
+    - [X] 5.3.2. Taking input via path parameters
+  - [X] 5.4. Processing forms
+    - [X] 5.4.1. Writing a form-handling controller
+    - [X] 5.4.2. Validating forms
+  - [X] 5.5. Summry
 
-- [ ] 6. Rendering web views
-- [ ] 6.1. Understanding view resolution
-- [ ] 6.2. Creating JSP views
-- [ ] 6.2.1. Configuring a JSP-ready view resolver
-- [ ] 6.2.2. Using Spring&#8217;s JSP libraries
-- [ ] 6.3. Defining a layout with Apache Tiles views
-- [ ] 6.3.1. Configuring a Tiles view resolver
-- [ ] 6.4. Working with Thymeleaf
-- [ ] 6.4.1. Configuring a Thymeleaf view resolver
-- [ ] 6.4.2. Defining Thymeleaf templates
-- [ ] 6.5. Summary
+- [X] 6. Rendering web views
+  - [X] 6.1. Understanding view resolution
+  - [X] 6.2. Creating JSP views
+    - [X] 6.2.1. Configuring a JSP-ready view resolver
+    - [X] 6.2.2. Using Spring's JSP libraries
+  - [X] 6.3. Defining a layout with Apache Tiles views
+    - [X] 6.3.1. Configuring a Tiles view resolver
+  - [X] 6.4. Working with Thymeleaf
+    - [X] 6.4.1. Configuring a Thymeleaf view resolver
+    - [X] 6.4.2. Defining Thymeleaf templates
+  - [X] 6.5. Summary
 
-- [ ] 7. Advanced Spring MVC
-- [ ] 7.1. Alternate Spring MVC configuration
-- [ ] 7.1.1. Customizing DispatcherServlet configuration
-- [ ] 7.1.2. Adding additional servlets and filters
-- [ ] 7.1.3. Declaring DispatcherServlet in web.xml
-- [ ] 7.2. Processing multipart form data
-- [ ] 7.2.1. Configuring a multipart resolver
-- [ ] 7.2.2. Handling multipart requests
-- [ ] 7.3. Handling exceptions
-- [ ] 7.3.1. Mapping exceptions to HTTP status codes
-- [ ] 7.3.2. Writing exception-handling methods
-- [ ] 7.4. Advising controllers
-- [ ] 7.5. Carrying data across redirect requests
-- [ ] 7.5.1. Redirecting with URL templates
-- [ ] 7.5.2. Working with flash attributes
-- [ ] 7.6. Summary
+- [o] 7. Advanced Spring MVC
+  - Not really interesting in those topics
+  - [X] 7.1. Alternate Spring MVC configuration
+    - [X] 7.1.1. Customizing DispatcherServlet configuration
+    - [X] 7.1.2. Adding additional servlets and filters
+    - [X] 7.1.3. Declaring DispatcherServlet in web.xml
+  - [X] 7.2. Processing multipart form data
+    - [X] 7.2.1. Configuring a multipart resolver
+    - [X] 7.2.2. Handling multipart requests
+  - [X] 7.3. Handling exceptions
+    - [X] 7.3.1. Mapping exceptions to HTTP status codes
+    - [X] 7.3.2. Writing exception-handling methods
+      - Not really sure that `@ExceptionHandler`method is a good way to separate logic and exception handling code.
+      - I suspect that in real world code, we should document very carefully where the exception can be thrown, and where to look for its handler.
+      - And in next session, they will take the handler to an external class.
+  - [X] 7.4. Advising controllers
+  - [ ] 7.5. Carrying data across redirect requests
+    - A redirection = old request die + new GET request borns => data is die with the the old request.
+    - [ ] 7.5.1. Redirecting with URL templates
+    - [ ] 7.5.2. Working with flash attributes
+  - [ ] 7.6. Summary
 
 - [ ] 8. Working with Spring Web Flow
-- [ ] 8.1. Configuring Web Flow in Spring
-- [ ] 8.1.1. Wiring a flow executor
-- [ ] 8.1.2. Configuring a flow registry
-- [ ] 8.1.3. Handling flow requests
-- [ ] 8.2. The components of a flow
-- [ ] 8.2.1. States
-- [ ] 8.2.2. Transitions
-- [ ] 8.2.3. Flow data
-- [ ] 8.3. Putting it all together: the pizza flow
-- [ ] 8.3.1. Defining the base flow
-- [ ] 8.3.2. Collecting customer information
-- [ ] 8.3.3. Building an order
-- [ ] 8.3.4. Taking payment
-- [ ] 8.4. Securing web flows
-- [ ] 8.5. Summary
+  - [ ] 8.1. Configuring Web Flow in Spring
+    - [ ] 8.1.1. Wiring a flow executor
+    - [ ] 8.1.2. Configuring a flow registry
+    - [ ] 8.1.3. Handling flow requests
+  - [ ] 8.2. The components of a flow
+    - [ ] 8.2.1. States
+    - [ ] 8.2.2. Transitions
+    - [ ] 8.2.3. Flow data
+  - [ ] 8.3. Putting it all together: the pizza flow
+    - [ ] 8.3.1. Defining the base flow
+    - [ ] 8.3.2. Collecting customer information
+    - [ ] 8.3.3. Building an order
+    - [ ] 8.3.4. Taking payment
+  - [ ] 8.4. Securing web flows
+  - [ ] 8.5. Summary
 
 - [ ] 9. Securing web applications
-- [ ] 9.1. Getting started with Spring Security
-- [ ] 9.1.1. Understanding Spring Security modules
-- [ ] 9.1.2. Filtering web requests
-- [ ] 9.1.3. Writing a simple security configuration
-- [ ] 9.2. Selecting user details services
-- [ ] 9.2.1. Working with an in-memory user store
-- [ ] 9.2.2. Authenticating against database tables
-- [ ] 9.2.3. Applying LDAP-backed authentication
-- [ ] 9.2.4. Configuring a custom user service
-- [ ] 9.3. Intercepting requests
-- [ ] 9.3.1. Securing with Spring Expressions
-- [ ] 9.3.2. Enforcing channel security
-- [ ] 9.3.3. Preventing cross-site request forgery
-- [ ] 9.4. Authenticating users
-- [ ] 9.4.1. Adding a custom login page
-- [ ] 9.4.2. Enabling HTTP Basic authentication
-- [ ] 9.4.3. Enabling remember-me functionality
-- [ ] 9.4.4. Logging out
-- [ ] 9.5. Securing the view
-- [ ] 9.5.1. Using Spring Security&#8217;s JSP tag library
-- [ ] 9.5.2. Working with Thymeleaf&#8217;s Spring Security dialect
-- [ ] 9.6. Summary
+  - [ ] 9.1. Getting started with Spring Security
+    - [ ] 9.1.1. Understanding Spring Security modules
+    - [ ] 9.1.2. Filtering web requests
+    - [ ] 9.1.3. Writing a simple security configuration
+  - [ ] 9.2. Selecting user details services
+    - [ ] 9.2.1. Working with an in-memory user store
+    - [ ] 9.2.2. Authenticating against database tables
+    - [ ] 9.2.3. Applying LDAP-backed authentication
+    - [ ] 9.2.4. Configuring a custom user service
+  - [ ] 9.3. Intercepting requests
+    - [ ] 9.3.1. Securing with Spring Expressions
+    - [ ] 9.3.2. Enforcing channel security
+    - [ ] 9.3.3. Preventing cross-site request forgery
+  - [ ] 9.4. Authenticating users
+    - [ ] 9.4.1. Adding a custom login page
+    - [ ] 9.4.2. Enabling HTTP Basic authentication
+    - [ ] 9.4.3. Enabling remember-me functionality
+    - [ ] 9.4.4. Logging out
+  - [ ] 9.5. Securing the view
+    - [ ] 9.5.1. Using Spring Security's JSP tag library
+    - [ ] 9.5.2. Working with Thymeleaf's Spring Security dialect
+  - [ ] 9.6. Summary
 - [ ] Part 3 Spring in the back end
 
 - [ ] 10. Hitting the database with Spring and JDBC
-- [ ] 10.1. Learning Spring&#8217;s data-access philosophy
-- [ ] 10.1.1. Getting to know Spring&#8217;s data-access exception hierarchy
-- [ ] 10.1.2. Templating data access
-- [ ] 10.2. Configuring a data source
-- [ ] 10.2.1. Using JNDI data sources
-- [ ] 10.2.2. Using a pooled data source
-- [ ] 10.2.3. Using JDBC driver-based data sources
-- [ ] 10.2.4. Using an embedded data source
-- [ ] 10.2.5. Using profiles to select a data source
-- [ ] 10.3. Using JDBC with Spring
-- [ ] 10.3.1. Tackling runaway JDBC code
-- [ ] 10.3.2. Working with JDBC templates
-- [ ] 10.4. Summary
+  - [ ] 10.1. Learning Spring's data-access philosophy
+    - [ ] 10.1.1. Getting to know Spring's data-access exception hierarchy
+    - [ ] 10.1.2. Templating data access
+  - [ ] 10.2. Configuring a data source
+    - [ ] 10.2.1. Using JNDI data sources
+    - [ ] 10.2.2. Using a pooled data source
+    - [ ] 10.2.3. Using JDBC driver-based data sources
+    - [ ] 10.2.4. Using an embedded data source
+    - [ ] 10.2.5. Using profiles to select a data source
+  - [ ] 10.3. Using JDBC with Spring
+    - [ ] 10.3.1. Tackling runaway JDBC code
+    - [ ] 10.3.2. Working with JDBC templates
+  - [ ] 10.4. Summary
 
 - [ ] 11. Persisting data with object-relational mapping
-- [ ] 11.1. Integrating Hibernate with Spring
-- [ ] 11.1.1. Declaring a Hibernate session factory
-- [ ] 11.1.2. Building Spring-free Hibernate
-- [ ] 11.2. Spring and the Java Persistence API
-- [ ] 11.2.1. Configuring an entity manager factory
-- [ ] 11.2.2. Writing a JPA-based repository
-- [ ] 11.3. Automatic JPA repositories with Spring Data
-- [ ] 11.3.1. Defining query methods
-- [ ] 11.3.2. Declaring custom queries
-- [ ] 11.3.3. Mixing in custom functionality
-- [ ] 11.4. Summary
+  - [ ] 11.1. Integrating Hibernate with Spring
+    - [ ] 11.1.1. Declaring a Hibernate session factory
+    - [ ] 11.1.2. Building Spring-free Hibernate
+  - [ ] 11.2. Spring and the Java Persistence API
+    - [ ] 11.2.1. Configuring an entity manager factory
+    - [ ] 11.2.2. Writing a JPA-based repository
+  - [ ] 11.3. Automatic JPA repositories with Spring Data
+    - [ ] 11.3.1. Defining query methods
+    - [ ] 11.3.2. Declaring custom queries
+    - [ ] 11.3.3. Mixing in custom functionality
+  - [ ] 11.4. Summary
 
 - [ ] 12. Working with NoSQL databases
-- [ ] 12.1. Persisting documents with MongoDB
-- [ ] 12.1.1. Enabling MongoDB
-- [ ] 12.1.2. Annotating model types for MongoDB persistence
-- [ ] 12.1.3. Accessing MongoDB with MongoTemplate
-- [ ] 12.1.4. Writing a MongoDB repository
-- [ ] 12.2. Working with graph data in Neo4j
-- [ ] 12.2.1. Configuring Spring Data Neo4j
-- [ ] 12.2.2. Annotating graph entities
-- [ ] 12.2.3. Working with Neo4jTemplate
-- [ ] 12.2.4. Creating automatic Neo4j repositories
-- [ ] 12.3. Working with key-value data in Redis
-- [ ] 12.3.1. Connecting to Redis
-- [ ] 12.3.2. Working with RedisTemplate
-- [ ] 12.3.3. Setting key and value serializers
-- [ ] 12.4. Summary
+  - [ ] 12.1. Persisting documents with MongoDB
+    - [ ] 12.1.1. Enabling MongoDB
+    - [ ] 12.1.2. Annotating model types for MongoDB persistence
+    - [ ] 12.1.3. Accessing MongoDB with MongoTemplate
+    - [ ] 12.1.4. Writing a MongoDB repository
+  - [ ] 12.2. Working with graph data in Neo4j
+    - [ ] 12.2.1. Configuring Spring Data Neo4j
+    - [ ] 12.2.2. Annotating graph entities
+    - [ ] 12.2.3. Working with Neo4jTemplate
+    - [ ] 12.2.4. Creating automatic Neo4j repositories
+  - [ ] 12.3. Working with key-value data in Redis
+    - [ ] 12.3.1. Connecting to Redis
+    - [ ] 12.3.2. Working with RedisTemplate
+    - [ ] 12.3.3. Setting key and value serializers
+  - [ ] 12.4. Summary
 
 - [ ] 13. Caching data
-- [ ] 13.1. Enabling cache support
-- [ ] 13.1.1. Configuring a cache manager
-- [ ] 13.2. Annotating methods for caching
-- [ ] 13.2.1. Populating the cache
-- [ ] 13.2.2. Removing cache entries
-- [ ] 13.3. Declaring caching in XML
-- [ ] 13.4. Summary
+  - [ ] 13.1. Enabling cache support
+    - [ ] 13.1.1. Configuring a cache manager
+  - [ ] 13.2. Annotating methods for caching
+    - [ ] 13.2.1. Populating the cache
+    - [ ] 13.2.2. Removing cache entries
+  - [ ] 13.3. Declaring caching in XML
+  - [ ] 13.4. Summary
 
 - [ ] 14. Securing methods
-- [ ] 14.1. Securing methods with annotations
-- [ ] 14.1.1. Restricting method access with @Secured
-- [ ] 14.1.2. Using JSR-250&#8217;s @RolesAllowed with Spring Security
-- [ ] 14.2. Using expressions for method-level security
-- [ ] 14.2.1. Expressing method access rules
-- [ ] 14.2.2. Filtering method inputs and outputs
-- [ ] 14.3. Summary
+  - [ ] 14.1. Securing methods with annotations
+    - [ ] 14.1.1. Restricting method access with @Secured
+    - [ ] 14.1.2. Using JSR-250's @RolesAllowed with Spring Security
+  - [ ] 14.2. Using expressions for method-level security
+    - [ ] 14.2.1. Expressing method access rules
+    - [ ] 14.2.2. Filtering method inputs and outputs
+  - [ ] 14.3. Summary
 - [ ] Part 4 Integrating Spring
 
 - [ ] 15. Working with remote services
-- [ ] 15.1. An overview of Spring remoting
-- [ ] 15.2. Working with RMI
-- [ ] 15.2.1. Exporting an RMI service
-- [ ] 15.2.2. Wiring an RMI service
-- [ ] 15.3. Exposing remote services with Hessian and Burlap
-- [ ] 15.3.1. Exposing bean functionality with Hessian/Burlap
-- [ ] 15.3.2. Accessing Hessian/Burlap services
-- [ ] 15.4. Using Spring&#8217;s HttpInvoker
-- [ ] 15.4.1. Exposing beans as HTTP services
-- [ ] 15.4.2. Accessing services via HTTP
-- [ ] 15.5. Publishing and consuming web services
-- [ ] 15.5.1. Creating Spring-enabled JAX-WS endpoints
-- [ ] 15.5.2. Proxying JAX-WS services on the client side
-- [ ] 15.6. Summary
+  - [ ] 15.1. An overview of Spring remoting
+  - [ ] 15.2. Working with RMI
+    - [ ] 15.2.1. Exporting an RMI service
+    - [ ] 15.2.2. Wiring an RMI service
+  - [ ] 15.3. Exposing remote services with Hessian and Burlap
+    - [ ] 15.3.1. Exposing bean functionality with Hessian/Burlap
+    - [ ] 15.3.2. Accessing Hessian/Burlap services
+  - [ ] 15.4. Using Spring's HttpInvoker
+    - [ ] 15.4.1. Exposing beans as HTTP services
+    - [ ] 15.4.2. Accessing services via HTTP
+  - [ ] 15.5. Publishing and consuming web services
+    - [ ] 15.5.1. Creating Spring-enabled JAX-WS endpoints
+    - [ ] 15.5.2. Proxying JAX-WS services on the client side
+  - [ ] 15.6. Summary
 
 - [ ] 16. Creating REST APIs with Spring MVC
-- [ ] 16.1. Getting REST
-- [ ] 16.1.1. The fundamentals of REST
-- [ ] 16.1.2. How Spring supports REST
-- [ ] 16.2. Creating your first REST endpoint
-- [ ] 16.2.1. Negotiating resource representation
-- [ ] 16.2.2. Working with HTTP message converters
-- [ ] 16.3. Serving more than resources
-- [ ] 16.3.1. Communicating errors to the client
-- [ ] 16.3.2. Setting headers in the response
-- [ ] 16.4. Consuming REST resources
-- [ ] 16.4.1. Exploring RestTemplate&#8217;s operations
-- [ ] 16.4.2. GETting resources
-- [ ] 16.4.3. Retrieving resources
-- [ ] 16.4.4. Extracting response metadata
-- [ ] 16.4.5. PUTting resources
-- [ ] 16.4.6. DELETEing resources
-- [ ] 16.4.7. POSTing resource data
-- [ ] 16.4.8. Receiving object responses from POST requests
-- [ ] 16.4.9. Receiving a resource location after a POST request
-- [ ] 16.4.10. Exchanging resources
-- [ ] 16.5. Summary
+  - [ ] 16.1. Getting REST
+    - [ ] 16.1.1. The fundamentals of REST
+    - [ ] 16.1.2. How Spring supports REST
+  - [ ] 16.2. Creating your first REST endpoint
+    - [ ] 16.2.1. Negotiating resource representation
+    - [ ] 16.2.2. Working with HTTP message converters
+  - [ ] 16.3. Serving more than resources
+    - [ ] 16.3.1. Communicating errors to the client
+    - [ ] 16.3.2. Setting headers in the response
+  - [ ] 16.4. Consuming REST resources
+    - [ ] 16.4.1. Exploring RestTemplate's operations
+    - [ ] 16.4.2. GETting resources
+    - [ ] 16.4.3. Retrieving resources
+    - [ ] 16.4.4. Extracting response metadata
+    - [ ] 16.4.5. PUTting resources
+    - [ ] 16.4.6. DELETEing resources
+    - [ ] 16.4.7. POSTing resource data
+    - [ ] 16.4.8. Receiving object responses from POST requests
+    - [ ] 16.4.9. Receiving a resource location after a POST request
+    - [ ] 16.4.10. Exchanging resources
+  - [ ] 16.5. Summary
 
 - [ ] 17. Messaging in Spring
-- [ ] 17.1. A brief introduction to asynchronous messaging
-- [ ] 17.1.1. Sending messages
-- [ ] 17.1.2. Assessing the benefits of asynchronous messaging
-- [ ] 17.2. Sending messages with JMS
-- [ ] 17.2.1. Setting up a message broker in Spring
-- [ ] 17.2.2. Using Spring&#8217;s JMS template
-- [ ] 17.2.3. Creating message-driven POJOs
-- [ ] 17.2.4. Using message-based RPC
-- [ ] 17.3. Messaging with AMQP
-- [ ] 17.3.1. A brief introduction to AMQP
-- [ ] 17.3.2. Configuring Spring for AMQP messaging
-- [ ] 17.3.3. Sending messages with RabbitTemplate
-- [ ] 17.3.4. Receiving AMQP messages
-- [ ] 17.4. Summary
+  - [ ] 17.1. A brief introduction to asynchronous messaging
+    - [ ] 17.1.1. Sending messages
+    - [ ] 17.1.2. Assessing the benefits of asynchronous messaging
+  - [ ] 17.2. Sending messages with JMS
+    - [ ] 17.2.1. Setting up a message broker in Spring
+    - [ ] 17.2.2. Using Spring's JMS template
+    - [ ] 17.2.3. Creating message-driven POJOs
+    - [ ] 17.2.4. Using message-based RPC
+  - [ ] 17.3. Messaging with AMQP
+    - [ ] 17.3.1. A brief introduction to AMQP
+    - [ ] 17.3.2. Configuring Spring for AMQP messaging
+    - [ ] 17.3.3. Sending messages with RabbitTemplate
+    - [ ] 17.3.4. Receiving AMQP messages
+  - [ ] 17.4. Summary
 
 - [ ] 18. Messaging with WebSocket and STOMP
-- [ ] 18.1. Working with Spring&#8217;s low-level WebSocket API
-- [ ] 18.2. Coping with a lack of WebSocket support
-- [ ] 18.3. Working with STOMP messaging
-- [ ] 18.3.1. Enabling STOMP messaging
-- [ ] 18.3.2. Handling STOMP messages from the client
-- [ ] 18.3.3. Sending messages to the client
-- [ ] 18.4. Working with user-targeted messages
-- [ ] 18.4.1. Working with user messages in a controller
-- [ ] 18.4.2. Sending messages to a specific user
-- [ ] 18.5. Handling message exceptions
-- [ ] 18.6. Summary
+  - [ ] 18.1. Working with Spring's low-level WebSocket API
+  - [ ] 18.2. Coping with a lack of WebSocket support
+  - [ ] 18.3. Working with STOMP messaging
+    - [ ] 18.3.1. Enabling STOMP messaging
+    - [ ] 18.3.2. Handling STOMP messages from the client
+    - [ ] 18.3.3. Sending messages to the client
+  - [ ] 18.4. Working with user-targeted messages
+    - [ ] 18.4.1. Working with user messages in a controller
+    - [ ] 18.4.2. Sending messages to a specific user
+  - [ ] 18.5. Handling message exceptions
+  - [ ] 18.6. Summary
 
 - [ ] 19. Sending email with Spring
-- [ ] 19.1. Configuring Spring to send email
-- [ ] 19.1.1. Configuring a mail sender
-- [ ] 19.1.2. Wiring and using the mail sender
-- [ ] 19.2. Constructing rich email messages
-- [ ] 19.2.1. Adding attachments
-- [ ] 19.2.2. Sending email with rich content
-- [ ] 19.3. Generating email with templates
-- [ ] 19.3.1. Constructing email messages with Velocity
-- [ ] 19.3.2. Using Thymeleaf to create email messages
-- [ ] 19.4. Summary
+  - [ ] 19.1. Configuring Spring to send email
+    - [ ] 19.1.1. Configuring a mail sender
+    - [ ] 19.1.2. Wiring and using the mail sender
+  - [ ] 19.2. Constructing rich email messages
+    - [ ] 19.2.1. Adding attachments
+    - [ ] 19.2.2. Sending email with rich content
+  - [ ] 19.3. Generating email with templates
+    - [ ] 19.3.1. Constructing email messages with Velocity
+    - [ ] 19.3.2. Using Thymeleaf to create email messages
+  - [ ] 19.4. Summary
 
 - [ ] 20. Managing Spring beans with JMX
-- [ ] 20.1. Exporting Spring beans as MBeans
-- [ ] 20.1.1. Exposing methods by name
-- [ ] 20.1.2. Using interfaces to define MBean operations and attributes
-- [ ] 20.1.3. Working with annotation-driven MBeans
-- [ ] 20.1.4. Handling MBean collisions
-- [ ] 20.2. Remoting MBeans
-- [ ] 20.2.1. Exposing remote MBeans
-- [ ] 20.2.2. Accessing remote MBeans
-- [ ] 20.2.3. Proxying MBeans
-- [ ] 20.3. Handling notifications
-- [ ] 20.3.1. Listening for notifications
-- [ ] 20.4. Summary
+  - [ ] 20.1. Exporting Spring beans as MBeans
+    - [ ] 20.1.1. Exposing methods by name
+    - [ ] 20.1.2. Using interfaces to define MBean operations and attributes
+    - [ ] 20.1.3. Working with annotation-driven MBeans
+    - [ ] 20.1.4. Handling MBean collisions
+  - [ ] 20.2. Remoting MBeans
+    - [ ] 20.2.1. Exposing remote MBeans
+    - [ ] 20.2.2. Accessing remote MBeans
+    - [ ] 20.2.3. Proxying MBeans
+  - [ ] 20.3. Handling notifications
+    - [ ] 20.3.1. Listening for notifications
+  - [ ] 20.4. Summary
 
 - [ ] 21. Simplifying Spring development with Spring Boot
-- [ ] 21.1. Introducing Spring Boot
-- [ ] 21.1.1. Adding starter dependencies
-- [ ] 21.1.2. Autoconfiguration
-- [ ] 21.1.3. The Spring Boot CLI
-- [ ] 21.1.4. The Actuator
-- [ ] 21.2. Building an application with Spring Boot
-- [ ] 21.2.1. Handling requests
-- [ ] 21.2.2. Creating the view
-- [ ] 21.2.3. Adding static artifacts
-- [ ] 21.2.4. Persisting the data
-- [ ] 21.2.5. Try it out
-- [ ] 21.3. Going Groovy with the Spring Boot CLI
-- [ ] 21.3.1. Writing a Groovy controller
-- [ ] 21.3.2. Persisting with a Groovy repository
-- [ ] 21.3.3. Running the Spring Boot CLI
-- [ ] 21.4. Gaining application insight with the Actuator
-- [ ] 21.5. Summary
+  - [ ] 21.1. Introducing Spring Boot
+    - [ ] 21.1.1. Adding starter dependencies
+    - [ ] 21.1.2. Autoconfiguration
+    - [ ] 21.1.3. The Spring Boot CLI
+    - [ ] 21.1.4. The Actuator
+  - [ ] 21.2. Building an application with Spring Boot
+    - [ ] 21.2.1. Handling requests
+    - [ ] 21.2.2. Creating the view
+    - [ ] 21.2.3. Adding static artifacts
+    - [ ] 21.2.4. Persisting the data
+    - [ ] 21.2.5. Try it out
+  - [ ] 21.3. Going Groovy with the Spring Boot CLI
+    - [ ] 21.3.1. Writing a Groovy controller
+    - [ ] 21.3.2. Persisting with a Groovy repository
+    - [ ] 21.3.3. Running the Spring Boot CLI
+  - [ ] 21.4. Gaining application insight with the Actuator
+  - [ ] 21.5. Summary
