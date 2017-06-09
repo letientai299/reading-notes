@@ -32,7 +32,7 @@
     - [X] 2.2.1. Creating discoverable beans
       - Follow until listing 2.5, just some simple line of code, and we have DI unit test. Very nice.
     - [X] 2.2.2. Naming a component-scanned bean
-      - `@Named` is not only a poor name, it also requires addtional dependency, so I would prefer `@Component`also.
+      - `@Named` is not only a poor name, it also requires additional dependency, so I would prefer `@Component`also.
     - [X] 2.2.3. Setting a base package for component scanning
     - [X] 2.2.4. Annotating beans to be automatically wired
     - [X] 2.2.5. Verifying automatic configuration
@@ -121,7 +121,7 @@
     - [X] 6.4.2. Defining Thymeleaf templates
   - [X] 6.5. Summary
 
-- [o] 7. Advanced Spring MVC
+- [X] 7. Advanced Spring MVC
   - Not really interesting in those topics
   - [X] 7.1. Alternate Spring MVC configuration
     - [X] 7.1.1. Customizing DispatcherServlet configuration
@@ -137,13 +137,14 @@
       - I suspect that in real world code, we should document very carefully where the exception can be thrown, and where to look for its handler.
       - And in next session, they will take the handler to an external class.
   - [X] 7.4. Advising controllers
-  - [ ] 7.5. Carrying data across redirect requests
+  - [X] 7.5. Carrying data across redirect requests
     - A redirection = old request die + new GET request borns => data is die with the the old request.
-    - [ ] 7.5.1. Redirecting with URL templates
-    - [ ] 7.5.2. Working with flash attributes
-  - [ ] 7.6. Summary
+    - [X] 7.5.1. Redirecting with URL templates
+    - [X] 7.5.2. Working with flash attributes
+  - [X] 7.6. Summary
 
 - [ ] 8. Working with Spring Web Flow
+  - Skipped.
   - [ ] 8.1. Configuring Web Flow in Spring
     - [ ] 8.1.1. Wiring a flow executor
     - [ ] 8.1.2. Configuring a flow registry
@@ -160,110 +161,126 @@
   - [ ] 8.4. Securing web flows
   - [ ] 8.5. Summary
 
-- [ ] 9. Securing web applications
-  - [ ] 9.1. Getting started with Spring Security
-    - [ ] 9.1.1. Understanding Spring Security modules
-    - [ ] 9.1.2. Filtering web requests
-    - [ ] 9.1.3. Writing a simple security configuration
-  - [ ] 9.2. Selecting user details services
-    - [ ] 9.2.1. Working with an in-memory user store
-    - [ ] 9.2.2. Authenticating against database tables
-    - [ ] 9.2.3. Applying LDAP-backed authentication
-    - [ ] 9.2.4. Configuring a custom user service
-  - [ ] 9.3. Intercepting requests
-    - [ ] 9.3.1. Securing with Spring Expressions
-    - [ ] 9.3.2. Enforcing channel security
-    - [ ] 9.3.3. Preventing cross-site request forgery
-  - [ ] 9.4. Authenticating users
-    - [ ] 9.4.1. Adding a custom login page
-    - [ ] 9.4.2. Enabling HTTP Basic authentication
-    - [ ] 9.4.3. Enabling remember-me functionality
-    - [ ] 9.4.4. Logging out
-  - [ ] 9.5. Securing the view
-    - [ ] 9.5.1. Using Spring Security's JSP tag library
-    - [ ] 9.5.2. Working with Thymeleaf's Spring Security dialect
-  - [ ] 9.6. Summary
+- [X] 9. Securing web applications
+  - Still focus on the web, but has some great stuff related to security to follow.
+  - [X] 9.1. Getting started with Spring Security
+    - [X] 9.1.1. Understanding Spring Security modules
+    - [X] 9.1.2. Filtering web requests
+    - [X] 9.1.3. Writing a simple security configuration
+  - [X] 9.2. Selecting user details services
+    - [X] 9.2.1. Working with an in-memory user store
+    - [X] 9.2.2. Authenticating against database tables
+      - The password in the db is never decoded. Only plain text get encoded and then be compared together.
+    - [X] 9.2.3. Applying LDAP-backed authentication
+    - [X] 9.2.4. Configuring a custom user service
+  - [X] 9.3. Intercepting requests
+    - [X] 9.3.1. Securing with Spring Expressions
+    - [X] 9.3.2. Enforcing channel security
+    - [X] 9.3.3. Preventing cross-site request forgery
+  - [X] 9.4. Authenticating users
+    - [X] 9.4.1. Adding a custom login page
+    - [X] 9.4.2. Enabling HTTP Basic authentication
+    - [X] 9.4.3. Enabling remember-me functionality
+    - [X] 9.4.4. Logging out
+  - [X] 9.5. Securing the view
+    - [X] 9.5.1. Using Spring Security's JSP tag library
+    - [X] 9.5.2. Working with Thymeleaf's Spring Security dialect
+  - [X] 9.6. Summary
+
 - [ ] Part 3 Spring in the back end
+  - Hope that this is what I'm looking for.
 
-- [ ] 10. Hitting the database with Spring and JDBC
-  - [ ] 10.1. Learning Spring's data-access philosophy
-    - [ ] 10.1.1. Getting to know Spring's data-access exception hierarchy
-    - [ ] 10.1.2. Templating data access
-  - [ ] 10.2. Configuring a data source
-    - [ ] 10.2.1. Using JNDI data sources
-    - [ ] 10.2.2. Using a pooled data source
-    - [ ] 10.2.3. Using JDBC driver-based data sources
-    - [ ] 10.2.4. Using an embedded data source
-    - [ ] 10.2.5. Using profiles to select a data source
-  - [ ] 10.3. Using JDBC with Spring
-    - [ ] 10.3.1. Tackling runaway JDBC code
-    - [ ] 10.3.2. Working with JDBC templates
-  - [ ] 10.4. Summary
+- [X] 10. Hitting the database with Spring and JDBC
+  - [X] 10.1. Learning Spring's data-access philosophy
+    - [X] 10.1.1. Getting to know Spring's data-access exception hierarchy
+      - One set of _Spring_ exceptions to rule all the providers?
+      - Across-the-board philosophy vs checked exception?
+    - [X] 10.1.2. Templating data access
+  - [X] 10.2. Configuring a data source
+    - [X] 10.2.1. Using JNDI data sources
+    - [X] 10.2.2. Using a pooled data source
+    - [X] 10.2.3. Using JDBC driver-based data sources
+    - [X] 10.2.4. Using an embedded data source
+    - [X] 10.2.5. Using profiles to select a data source
+  - [X] 10.3. Using JDBC with Spring
+    - [X] 10.3.1. Tackling runaway JDBC code
+    - [X] 10.3.2. Working with JDBC templates
+  - [X] 10.4. Summary
 
-- [ ] 11. Persisting data with object-relational mapping
-  - [ ] 11.1. Integrating Hibernate with Spring
-    - [ ] 11.1.1. Declaring a Hibernate session factory
-    - [ ] 11.1.2. Building Spring-free Hibernate
-  - [ ] 11.2. Spring and the Java Persistence API
-    - [ ] 11.2.1. Configuring an entity manager factory
-    - [ ] 11.2.2. Writing a JPA-based repository
-  - [ ] 11.3. Automatic JPA repositories with Spring Data
-    - [ ] 11.3.1. Defining query methods
-    - [ ] 11.3.2. Declaring custom queries
-    - [ ] 11.3.3. Mixing in custom functionality
-  - [ ] 11.4. Summary
+- [X] 11. Persisting data with object-relational mapping
+  - [X] 11.1. Integrating Hibernate with Spring
+    - [X] 11.1.1. Declaring a Hibernate session factory
+    - [X] 11.1.2. Building Spring-free Hibernate
+  - [X] 11.2. Spring and the Java Persistence API
+    - [X] 11.2.1. Configuring an entity manager factory
+      - I don't think that a good idea to hard-coded the package name in `emfb.setPackagesToScan(...)`
+    - [X] 11.2.2. Writing a JPA-based repository
+  - [X] 11.3. Automatic JPA repositories with Spring Data
+    - Generate an implementation of the interface with 18 methods at application startup time? No wonder why Spring startup takes time.
+    - [X] 11.3.1. Defining query methods
+      - This section rise a red flag for me to use the auto-generate JPA repo. I don't want to write normal java method that I can't refactor, just because Spring uses its name to generate its body.
+    - [X] 11.3.2. Declaring custom queries
+    - [X] 11.3.3. Mixing in custom functionality
+  - [X] 11.4. Summary
 
-- [ ] 12. Working with NoSQL databases
-  - [ ] 12.1. Persisting documents with MongoDB
-    - [ ] 12.1.1. Enabling MongoDB
-    - [ ] 12.1.2. Annotating model types for MongoDB persistence
-    - [ ] 12.1.3. Accessing MongoDB with MongoTemplate
-    - [ ] 12.1.4. Writing a MongoDB repository
-  - [ ] 12.2. Working with graph data in Neo4j
-    - [ ] 12.2.1. Configuring Spring Data Neo4j
-    - [ ] 12.2.2. Annotating graph entities
-    - [ ] 12.2.3. Working with Neo4jTemplate
-    - [ ] 12.2.4. Creating automatic Neo4j repositories
-  - [ ] 12.3. Working with key-value data in Redis
-    - [ ] 12.3.1. Connecting to Redis
-    - [ ] 12.3.2. Working with RedisTemplate
-    - [ ] 12.3.3. Setting key and value serializers
-  - [ ] 12.4. Summary
+- [X] 12. Working with NoSQL databases
+  - [X] 12.1. Persisting documents with MongoDB
+    - [X] 12.1.1. Enabling MongoDB
+    - [X] 12.1.2. Annotating model types for MongoDB persistence
+    - [X] 12.1.3. Accessing MongoDB with MongoTemplate
+    - [X] 12.1.4. Writing a MongoDB repository
+  - [X] 12.2. Working with graph data in Neo4j
+    - [X] 12.2.1. Configuring Spring Data Neo4j
+    - [X] 12.2.2. Annotating graph entities
+    - [X] 12.2.3. Working with Neo4jTemplate
+    - [X] 12.2.4. Creating automatic Neo4j repositories
+  - [X] 12.3. Working with key-value data in Redis
+    - [X] 12.3.1. Connecting to Redis
+    - [X] 12.3.2. Working with RedisTemplate
+    - [X] 12.3.3. Setting key and value serializers
+  - [X] 12.4. Summary
 
-- [ ] 13. Caching data
-  - [ ] 13.1. Enabling cache support
-    - [ ] 13.1.1. Configuring a cache manager
-  - [ ] 13.2. Annotating methods for caching
-    - [ ] 13.2.1. Populating the cache
-    - [ ] 13.2.2. Removing cache entries
-  - [ ] 13.3. Declaring caching in XML
-  - [ ] 13.4. Summary
+- [X] 13. Caching data
+  - [X] 13.1. Enabling cache support
+    - [X] 13.1.1. Configuring a cache manager
+      - Still not clear where is the cache server running, beside the Spring Application server.
+  - [X] 13.2. Annotating methods for caching
+    - [X] 13.2.1. Populating the cache
+    - [X] 13.2.2. Removing cache entries
+  - [X] 13.3. Declaring caching in XML
+  - [X] 13.4. Summary
 
-- [ ] 14. Securing methods
-  - [ ] 14.1. Securing methods with annotations
-    - [ ] 14.1.1. Restricting method access with @Secured
-    - [ ] 14.1.2. Using JSR-250's @RolesAllowed with Spring Security
-  - [ ] 14.2. Using expressions for method-level security
-    - [ ] 14.2.1. Expressing method access rules
-    - [ ] 14.2.2. Filtering method inputs and outputs
-  - [ ] 14.3. Summary
+- [X] 14. Securing methods
+  - [X] 14.1. Securing methods with annotations
+    - [X] 14.1.1. Restricting method access with @Secured
+    - [X] 14.1.2. Using JSR-250's @RolesAllowed with Spring Security
+  - [X] 14.2. Using expressions for method-level security
+    - [X] 14.2.1. Expressing method access rules
+    - [X] 14.2.2. Filtering method inputs and outputs
+      - _Ultimately, expressions are just String... It's hard to test and debug_
+  - [X] 14.3. Summary
+
 - [ ] Part 4 Integrating Spring
 
-- [ ] 15. Working with remote services
-  - [ ] 15.1. An overview of Spring remoting
-  - [ ] 15.2. Working with RMI
-    - [ ] 15.2.1. Exporting an RMI service
-    - [ ] 15.2.2. Wiring an RMI service
-  - [ ] 15.3. Exposing remote services with Hessian and Burlap
-    - [ ] 15.3.1. Exposing bean functionality with Hessian/Burlap
-    - [ ] 15.3.2. Accessing Hessian/Burlap services
-  - [ ] 15.4. Using Spring's HttpInvoker
-    - [ ] 15.4.1. Exposing beans as HTTP services
-    - [ ] 15.4.2. Accessing services via HTTP
-  - [ ] 15.5. Publishing and consuming web services
-    - [ ] 15.5.1. Creating Spring-enabled JAX-WS endpoints
-    - [ ] 15.5.2. Proxying JAX-WS services on the client side
-  - [ ] 15.6. Summary
+- [X] 15. Working with remote services
+  - This chapter doesn't have any code?
+  - [X] 15.1. An overview of Spring remoting
+  - [X] 15.2. Working with RMI
+    - [X] 15.2.1. Exporting an RMI service
+    - [X] 15.2.2. Wiring an RMI service
+      - RMI disadvantages:
+        - Client and server must be written in java and use same JRE.
+        - Arbitrary port can be blocked by firewall.
+  - [X] 15.3. Exposing remote services with Hessian and Burlap
+    - [X] 15.3.1. Exposing bean functionality with Hessian/Burlap
+    - [X] 15.3.2. Accessing Hessian/Burlap services
+  - [X] 15.4. Using Spring's HttpInvoker
+    - [X] 15.4.1. Exposing beans as HTTP services
+    - [X] 15.4.2. Accessing services via HTTP
+  - [X] 15.5. Publishing and consuming web services
+    - [X] 15.5.1. Creating Spring-enabled JAX-WS endpoints
+    - [X] 15.5.2. Proxying JAX-WS services on the client side
+  - [X] 15.6. Summary
 
 - [ ] 16. Creating REST APIs with Spring MVC
   - [ ] 16.1. Getting REST

@@ -1,0 +1,44 @@
+- [X] Foreword
+- [X] Introduction
+  - [X] A few words about me
+    - ... only one guiding principle: *You cannont really trust anyone*
+  - [X] About this book
+    - ... We were taucht to trust others... We ened to find a sensible compromise between security and productivity to live comfortably.
+
+
+Part I: The source
+
+- [X] Chapter 1: I can hear you typing
+  - [X] Overview
+  - [X] The need for randomness
+    - SSH connection start with a slow but reliable algorithm to verify, then switch to a faster algorithm to work.
+  - [X] The security of random number generators
+  - [X] I/O Entropy: This is your mouse speaking
+    - Hacking (sometimes) is predicting + brute force
+  - [ ] Entropy is a terrible thing to waste
+- [ ] Chapter 2:
+- [ ] Chapter 3:
+- [ ] Chapter 4:
+
+Part II: Save harbor
+
+- [ ] Chapter 5:
+- [ ] Chapter 6:
+- [ ] Chapter 7:
+- [ ] Chapter 8:
+
+Part III: Out in the Wild
+
+- [ ] Chapter 9:
+- [ ] Chapter 10:
+- [ ] Chapter 11:
+- [ ] Chapter 12:
+- [ ] Chapter 13:
+- [ ] Chapter 14:
+- [ ] Chapter 15:
+
+Part IV: The big picture
+
+- [ ] Chapter 16:
+- [ ] Chapter 17:
+- [ ] Chapter 18:
