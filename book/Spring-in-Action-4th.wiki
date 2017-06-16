@@ -282,83 +282,87 @@
     - [X] 15.5.2. Proxying JAX-WS services on the client side
   - [X] 15.6. Summary
 
-- [ ] 16. Creating REST APIs with Spring MVC
-  - [ ] 16.1. Getting REST
-    - [ ] 16.1.1. The fundamentals of REST
-    - [ ] 16.1.2. How Spring supports REST
-  - [ ] 16.2. Creating your first REST endpoint
-    - [ ] 16.2.1. Negotiating resource representation
-    - [ ] 16.2.2. Working with HTTP message converters
-  - [ ] 16.3. Serving more than resources
-    - [ ] 16.3.1. Communicating errors to the client
-    - [ ] 16.3.2. Setting headers in the response
-  - [ ] 16.4. Consuming REST resources
-    - [ ] 16.4.1. Exploring RestTemplate's operations
-    - [ ] 16.4.2. GETting resources
-    - [ ] 16.4.3. Retrieving resources
-    - [ ] 16.4.4. Extracting response metadata
-    - [ ] 16.4.5. PUTting resources
-    - [ ] 16.4.6. DELETEing resources
-    - [ ] 16.4.7. POSTing resource data
-    - [ ] 16.4.8. Receiving object responses from POST requests
-    - [ ] 16.4.9. Receiving a resource location after a POST request
-    - [ ] 16.4.10. Exchanging resources
-  - [ ] 16.5. Summary
+- [X] 16. Creating REST APIs with Spring MVC
+  - [X] 16.1. Getting REST
+    - [X] 16.1.1. The fundamentals of REST
+    - [X] 16.1.2. How Spring supports REST
+  - [X] 16.2. Creating your first REST endpoint
+    - [X] 16.2.1. Negotiating resource representation
+    - [X] 16.2.2. Working with HTTP message converters
+  - [X] 16.3. Serving more than resources
+    - [X] 16.3.1. Communicating errors to the client
+    - [X] 16.3.2. Setting headers in the response
+  - [X] 16.4. Consuming REST resources
+    - [X] 16.4.1. Exploring RestTemplate's operations
+    - [X] 16.4.2. GETting resources
+    - [X] 16.4.3. Retrieving resources
+    - [X] 16.4.4. Extracting response metadata
+    - [X] 16.4.5. PUTting resources
+    - [X] 16.4.6. DELETEing resources
+    - [X] 16.4.7. POSTing resource data
+    - [X] 16.4.8. Receiving object responses from POST requests
+    - [X] 16.4.9. Receiving a resource location after a POST request
+    - [X] 16.4.10. Exchanging resources
+      - One method to rule them all.
+  - [X] 16.5. Summary
 
-- [ ] 17. Messaging in Spring
-  - [ ] 17.1. A brief introduction to asynchronous messaging
-    - [ ] 17.1.1. Sending messages
-    - [ ] 17.1.2. Assessing the benefits of asynchronous messaging
-  - [ ] 17.2. Sending messages with JMS
-    - [ ] 17.2.1. Setting up a message broker in Spring
-    - [ ] 17.2.2. Using Spring's JMS template
-    - [ ] 17.2.3. Creating message-driven POJOs
-    - [ ] 17.2.4. Using message-based RPC
-  - [ ] 17.3. Messaging with AMQP
-    - [ ] 17.3.1. A brief introduction to AMQP
-    - [ ] 17.3.2. Configuring Spring for AMQP messaging
-    - [ ] 17.3.3. Sending messages with RabbitTemplate
-    - [ ] 17.3.4. Receiving AMQP messages
-  - [ ] 17.4. Summary
+- [X] 17. Messaging in Spring
+  - [X] 17.1. A brief introduction to asynchronous messaging
+    - [X] 17.1.1. Sending messages
+    - [X] 17.1.2. Assessing the benefits of asynchronous messaging
+  - [X] 17.2. Sending messages with JMS
+    - [X] 17.2.1. Setting up a message broker in Spring
+    - [X] 17.2.2. Using Spring's JMS template
+    - [X] 17.2.3. Creating message-driven POJOs
+    - [X] 17.2.4. Using message-based RPC
+  - [X] 17.3. Messaging with AMQP
+    - [X] 17.3.1. A brief introduction to AMQP
+    - [X] 17.3.2. Configuring Spring for AMQP messaging
+    - [X] 17.3.3. Sending messages with RabbitTemplate
+    - [X] 17.3.4. Receiving AMQP messages
+  - [X] 17.4. Summary
 
-- [ ] 18. Messaging with WebSocket and STOMP
-  - [ ] 18.1. Working with Spring's low-level WebSocket API
-  - [ ] 18.2. Coping with a lack of WebSocket support
-  - [ ] 18.3. Working with STOMP messaging
-    - [ ] 18.3.1. Enabling STOMP messaging
-    - [ ] 18.3.2. Handling STOMP messages from the client
-    - [ ] 18.3.3. Sending messages to the client
-  - [ ] 18.4. Working with user-targeted messages
-    - [ ] 18.4.1. Working with user messages in a controller
-    - [ ] 18.4.2. Sending messages to a specific user
-  - [ ] 18.5. Handling message exceptions
-  - [ ] 18.6. Summary
+- [X] 18. Messaging with WebSocket and STOMP
+  - [X] 18.1. Working with Spring's low-level WebSocket API
+  - [X] 18.2. Coping with a lack of WebSocket support
+  - [X] 18.3. Working with STOMP messaging
+    - [X] 18.3.1. Enabling STOMP messaging
+    - [X] 18.3.2. Handling STOMP messages from the client
+    - [X] 18.3.3. Sending messages to the client
+  - [X] 18.4. Working with user-targeted messages
+    - [X] 18.4.1. Working with user messages in a controller
+    - [X] 18.4.2. Sending messages to a specific user
+  - [X] 18.5. Handling message exceptions
+  - [X] 18.6. Summary
+    - How to test this Websocket messaging framework?
 
-- [ ] 19. Sending email with Spring
-  - [ ] 19.1. Configuring Spring to send email
-    - [ ] 19.1.1. Configuring a mail sender
-    - [ ] 19.1.2. Wiring and using the mail sender
-  - [ ] 19.2. Constructing rich email messages
-    - [ ] 19.2.1. Adding attachments
-    - [ ] 19.2.2. Sending email with rich content
-  - [ ] 19.3. Generating email with templates
-    - [ ] 19.3.1. Constructing email messages with Velocity
-    - [ ] 19.3.2. Using Thymeleaf to create email messages
-  - [ ] 19.4. Summary
+- [X] 19. Sending email with Spring
+  - [X] 19.1. Configuring Spring to send email
+    - [X] 19.1.1. Configuring a mail sender
+    - [X] 19.1.2. Wiring and using the mail sender
+  - [X] 19.2. Constructing rich email messages
+    - [X] 19.2.1. Adding attachments
+    - [X] 19.2.2. Sending email with rich content
+  - [X] 19.3. Generating email with templates
+    - [X] 19.3.1. Constructing email messages with Velocity
+    - [X] 19.3.2. Using Thymeleaf to create email messages
+  - [X] 19.4. Summary
+    - Should I develop the mail server application myself, or use 3rd software?
 
-- [ ] 20. Managing Spring beans with JMX
-  - [ ] 20.1. Exporting Spring beans as MBeans
-    - [ ] 20.1.1. Exposing methods by name
-    - [ ] 20.1.2. Using interfaces to define MBean operations and attributes
-    - [ ] 20.1.3. Working with annotation-driven MBeans
-    - [ ] 20.1.4. Handling MBean collisions
-  - [ ] 20.2. Remoting MBeans
-    - [ ] 20.2.1. Exposing remote MBeans
-    - [ ] 20.2.2. Accessing remote MBeans
-    - [ ] 20.2.3. Proxying MBeans
-  - [ ] 20.3. Handling notifications
-    - [ ] 20.3.1. Listening for notifications
-  - [ ] 20.4. Summary
+- [X] 20. Managing Spring beans with JMX
+  - [X] 20.1. Exporting Spring beans as MBeans
+    - [X] 20.1.1. Exposing methods by name
+    - [X] 20.1.2. Using interfaces to define MBean operations and attributes
+    - [X] 20.1.3. Working with annotation-driven MBeans
+    - [X] 20.1.4. Handling MBean collisions
+  - [X] 20.2. Remoting MBeans
+    - [X] 20.2.1. Exposing remote MBeans
+    - [X] 20.2.2. Accessing remote MBeans
+    - [X] 20.2.3. Proxying MBeans
+  - [X] 20.3. Handling notifications
+    - [X] 20.3.1. Listening for notifications
+  - [X] 20.4. Summary
+    - Good to know about this. So I could develop the monitor as an listener for my server app instead of query directly to the db.
 
 - [ ] 21. Simplifying Spring development with Spring Boot
   - [ ] 21.1. Introducing Spring Boot
