@@ -364,21 +364,21 @@
   - [X] 20.4. Summary
     - Good to know about this. So I could develop the monitor as an listener for my server app instead of query directly to the db.
 
-- [ ] 21. Simplifying Spring development with Spring Boot
-  - [ ] 21.1. Introducing Spring Boot
-    - [ ] 21.1.1. Adding starter dependencies
-    - [ ] 21.1.2. Autoconfiguration
-    - [ ] 21.1.3. The Spring Boot CLI
-    - [ ] 21.1.4. The Actuator
-  - [ ] 21.2. Building an application with Spring Boot
-    - [ ] 21.2.1. Handling requests
-    - [ ] 21.2.2. Creating the view
-    - [ ] 21.2.3. Adding static artifacts
-    - [ ] 21.2.4. Persisting the data
-    - [ ] 21.2.5. Try it out
-  - [ ] 21.3. Going Groovy with the Spring Boot CLI
-    - [ ] 21.3.1. Writing a Groovy controller
-    - [ ] 21.3.2. Persisting with a Groovy repository
-    - [ ] 21.3.3. Running the Spring Boot CLI
-  - [ ] 21.4. Gaining application insight with the Actuator
-  - [ ] 21.5. Summary
+- [X] 21. Simplifying Spring development with Spring Boot
+  - [X] 21.1. Introducing Spring Boot
+    - [X] 21.1.1. Adding starter dependencies
+    - [X] 21.1.2. Autoconfiguration
+    - [X] 21.1.3. The Spring Boot CLI
+    - [X] 21.1.4. The Actuator
+  - [X] 21.2. Building an application with Spring Boot
+    - [X] 21.2.1. Handling requests
+    - [X] 21.2.2. Creating the view
+    - [X] 21.2.3. Adding static artifacts
+    - [X] 21.2.4. Persisting the data
+    - [X] 21.2.5. Try it out
+  - [X] 21.3. Going Groovy with the Spring Boot CLI
+    - [X] 21.3.1. Writing a Groovy controller
+    - [X] 21.3.2. Persisting with a Groovy repository
+    - [X] 21.3.3. Running the Spring Boot CLI
+  - [X] 21.4. Gaining application insight with the Actuator
+  - [X] 21.5. Summary
