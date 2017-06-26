@@ -1,0 +1,128 @@
+Need to read this to really understand wtf is Oauth2 (and how to use it).
+
+- [O] 1. Introduction
+  - What is the issues with Oauth1?
+  - Incompatible with Oauth1
+  - [X] 1.1. Roles
+  - [X] 1.2. Protocol Flow
+  - [X] 1.3. Authorization Grant
+     - [X] 1.3.1. Authorization Code
+     - [X] 1.3.2. Implicit
+     - [X] 1.3.3. Resource Owner Password Credentials
+     - [X] 1.3.4. Client Credentials
+  - [X] 1.4. Access Token
+    - Bearer is just one form of Access Token.
+  - [X] 1.5. Refresh Token
+    - How should the Refresh Token be used safely and effectively?
+  - [X] 1.6. TLS Version
+  - [X] 1.7. HTTP Redirections
+  - [X] 1.8. Interoperability
+  - [X] 1.9. Notational Conventions
+ - [X] 2. Client Registration
+  - [X] 2.1. Client Types
+    - So, to implement authentication using Oauth2, the best way is use _web app_ profile?
+    - What is my web app client type/profile if I use Facebook or Github oAuth2?
+  - [X] 2.2. Client Identifier
+  - [X] 2.3. Client Authentication
+     - [X] 2.3.1. Client Password
+       - How to protect endpoints from Brute force attacks? Rate-limit?
+     - [X] 2.3.2. Other Authentication Methods
+  - [X] 2.4. Unregistered Clients
+    - Oh, so that my web app is just an Unregistered Client for fb and github. How did they handle such clients?
+ - [X] 3. Protocol Endpoints
+  - [X] 3.1. Authorization Endpoint
+     - [X] 3.1.1. Response Type
+     - [X] 3.1.2. Redirection Endpoint
+  - [X] 3.2. Token Endpoint
+     - [X] 3.2.1. Client Authentication
+  - [X] 3.3. Access Token Scope
+ - [X] 4. Obtaining Authorization
+  - [X] 4.1. Authorization Code Grant
+    - The most complicated grant type.
+     - [X] 4.1.1. Authorization Request
+     - [X] 4.1.2. Authorization Response
+     - [X] 4.1.3. Access Token Request
+     - [X] 4.1.4. Access Token Response
+  - [X] 4.2. Implicit Grant
+     - [X] 4.2.1. Authorization Request
+     - [X] 4.2.2. Access Token Response
+  - [X] 4.3. Resource Owner Password Credentials Grant
+     - [X] 4.3.1. Authorization Request and Response
+     - [X] 4.3.2. Access Token Request
+     - [X] 4.3.3. Access Token Response
+  - [X] 4.4. Client Credentials Grant
+     - [X] 4.4.1. Authorization Request and Response
+     - [X] 4.4.2. Access Token Request
+     - [X] 4.4.3. Access Token Response
+  - [X] 4.5. Extension Grants
+ - [X] 5. Issuing an Access Token
+  - [X] 5.1. Successful Response
+  - [X] 5.2. Error Response
+ - [X] 6. Refreshing an Access Token
+ - [X] 7. Accessing Protected Resources
+  - [X] 7.1. Access Token Types
+  - [X] 7.2. Error Response
+ - [X] 8. Extensibility
+  - [X] 8.1. Defining Access Token Types
+  - [X] 8.2. Defining New Endpoint Parameters
+  - [X] 8.3. Defining New Authorization Grant Types
+  - [X] 8.4. Defining New Authorization Endpoint Response Types
+  - [X] 8.5. Defining Additional Error Codes
+ - [X] 9. Native Applications
+ - [X] 10. Security Considerations
+  - [X] 10.1. Client Authentication
+  - [X] 10.2. Client Impersonation
+  - [X] 10.3. Access Tokens
+  - [X] 10.4. Refresh Tokens
+  - [X] 10.5. Authorization Codes
+  - [X] 10.6. Authorization Code Redirection URI Manipulation
+  - [X] 10.7. Resource Owner Password Credentials
+  - [X] 10.8. Request Confidentiality
+  - [X] 10.9. Ensuring Endpoint Authenticity
+  - [X] 10.10. Credentials-Guessing Attacks
+  - [X] 10.11. Phishing Attacks
+  - [X] 10.12. Cross-Site Request Forgery
+  - [X] 10.13. Clickjacking
+  - [X] 10.14. Code Injection and Input Validation
+  - [X] 10.15. Open Redirectors
+  - [X] 10.16. Misuse of Access Token to Impersonate Resource
+       - [X] Owner in Implicit Flow
+ - [ ] 11. IANA Considerations
+   - Skip the rest.
+  - [ ] 11.1. OAuth Access Token Types Registry
+     - [ ] 11.1.1. Registration Template
+  - [ ] 11.2. OAuth Parameters Registry
+     - [ ] 11.2.1. Registration Template
+     - [ ] 11.2.2. Initial Registry Contents
+  - [ ] 11.3. OAuth Authorization Endpoint Response Types Registry
+     - [ ] 11.3.1. Registration Template
+     - [ ] 11.3.2. Initial Registry Contents
+  - [ ] 11.4. OAuth Extensions Error Registry
+     - [ ] 11.4.1. Registration Template
+ - [ ] 12. References
+  - [ ] 12.1. Normative References
+  - [ ] 12.2. Informative References
+ - [ ] Appendix A. Augmented Backus-Naur Form (ABNF) Syntax
+   - [ ] A.1.  "client_id" Syntax
+   - [ ] A.2.  "client_secret" Syntax
+   - [ ] A.3.  "response_type" Syntax
+   - [ ] A.4.  "scope" Syntax
+   - [ ] A.5.  "state" Syntax
+   - [ ] A.6.  "redirect_uri" Syntax
+   - [ ] A.7.  "error" Syntax
+   - [ ] A.8.  "error_description" Syntax
+   - [ ] A.9.  "error_uri" Syntax
+   - [ ] A.10. "grant_type" Syntax
+   - [ ] A.11. "code" Syntax
+   - [ ] A.12. "access_token" Syntax
+   - [ ] A.13. "token_type" Syntax
+   - [ ] A.14. "expires_in" Syntax
+   - [ ] A.15. "username" Syntax
+   - [ ] A.16. "password" Syntax
+   - [ ] A.17. "refresh_token" Syntax
+   - [ ] A.18. Endpoint Parameter Syntax
+ - [ ] Appendix B. Use of application/x-www-form-urlencoded Media Type
+ - [ ] Appendix C. Acknowledgements
+
+
+
