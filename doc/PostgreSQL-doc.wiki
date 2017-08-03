@@ -1,0 +1,187 @@
+V9.6.3
+
+
+- [X] Preface
+  - [X] What is PostgreSQL?
+  - [X] A Brief History of PostgreSQL
+  - [X] Conventions
+  - [X] Further Information
+  - [X] Bug Reporting Guidelines
+
+- [O] I. Tutorial
+  - [O] 1. Getting Started
+    - [X] 1.1. Installation
+    - [X] 1.2. Architectural Fundamentals
+      - #Q: Is that server, server processes-client architecture any different with other DB?
+    - [X] 1.3. Creating a Database
+    - [X] 1.4. Accessing a Database
+      - `pqcli` is a really nice alternative for `psql`.
+
+  - [X] 2. The SQL Language
+    - [X] 2.1. Introduction
+    - [X] 2.2. Concepts
+    - [X] 2.3. Creating a New Table
+    - [X] 2.4. Populating a Table With Rows
+    - [X] 2.5. Querying a Table
+    - [X] 2.6. Joins Between Tables
+      - inner, outer, left, right, full and self join.
+    - [X] 2.7. Aggregate Functions
+      - `WHERE`selects input rows *before* `GROUP`, thus can't have aggregate function.
+      - `HAVING`selects input rows *after* `GROUP`, and usually contains aggregate function.
+    - [X] 2.8. Updates
+    - [X] 2.9. Deletions
+
+  - [O] 3. Advanced Features
+    - [X] 3.1. Introduction
+    - [X] 3.2. Views
+    - [X] 3.3. Foreign Keys
+    - [X] 3.4. Transactions
+    - [X] 3.5. Window Functions
+      - *A window function performs a calculation across a set of table rows that are somehow related to the current row*
+    - [X] 3.6. Inheritance
+    - [X] 3.7. Conclusion
+
+- [.] II. The SQL language
+  - [X] 4. SQL Syntax
+    - [X] 4.1. Lexical Structure
+      - 2 strings can be concatenated if between them there's as least 1 new line.
+      - (This slightly bizarre behavior is specified by SQL; PostgreSQL is following the standard.)
+    - [X] 4.2. Value Expressions
+    - [X] 4.3. Calling Functions
+  - [O] 5. Data Definition
+    - [X] 5.1. Table Basics
+    - [X] 5.2. Default Values
+    - [X] 5.3. Constraints
+      - About `Unique`, 2 null are never be equals in Postgres.
+    - [ ] 5.4. System Columns
+      - Know just a little bit about them.
+      - Don't know their usage yet.
+    - [X] 5.5. Modifying Tables
+    - [X] 5.6. Privileges
+    - [X] 5.7. Row Security Policies
+      - Row level security.
+      - Careful when running backup with row level security
+    - [X] 5.8. Schemas
+      - There's many thing that the `pgcli` can't auto complete. For example: `show search_p<tab>;`.
+    - [X] 5.9. Inheritance
+    - [X] 5.10. Partitioning
+    - [X] 5.11. Foreign Data
+    - [X] 5.12. Other Database Objects
+    - [X] 5.13. Dependency Tracking
+  - [O] 6. Data Manipulation
+    - [X] 6.1. Inserting Data
+      - We can bulk insert.
+    - [X] 6.2. Updating Data
+    - [X] 6.3. Deleting Data
+    - [X] 6.4. Returning Data From Modified Rows
+      - We can return the modified data.
+  - [.] 7. Queries
+    - [X] 7.1. Overview
+    - [X] 7.2. Table Expressions
+      - Not sure about `LATERAL`
+    - [ ] 7.3. Select Lists
+    - [ ] 7.4. Combining Queries
+    - [ ] 7.5. Sorting Rows
+    - [ ] 7.6. LIMIT and OFFSET
+    - [ ] 7.7. VALUES Lists
+    - [ ] 7.8. WITH Queries (Common Table Expressions)
+  - [ ] 8. Data Types
+    - [ ] 8.1. Numeric Types
+    - [ ] 8.2. Monetary Types
+    - [ ] 8.3. Character Types
+    - [ ] 8.4. Binary Data Types
+    - [ ] 8.5. Date/Time Types
+    - [ ] 8.6. Boolean Type
+    - [ ] 8.7. Enumerated Types
+    - [ ] 8.8. Geometric Types
+    - [ ] 8.9. Network Address Types
+    - [ ] 8.10. Bit String Types
+    - [ ] 8.11. Text Search Types
+    - [ ] 8.12. UUID Type
+    - [ ] 8.13. XML Type
+    - [ ] 8.14. JSON Types
+    - [ ] 8.15. Arrays
+    - [ ] 8.16. Composite Types
+    - [ ] 8.17. Range Types
+    - [ ] 8.18. Object Identifier Types
+    - [ ] 8.19. pg_lsn Type
+    - [ ] 8.20. Pseudo-Types
+  - [ ] 9. Functions and Operators
+    - [ ] 9.1. Logical Operators
+    - [ ] 9.2. Comparison Functions and Operators
+    - [ ] 9.3. Mathematical Functions and Operators
+    - [ ] 9.4. String Functions and Operators
+    - [ ] 9.5. Binary String Functions and Operators
+    - [ ] 9.6. Bit String Functions and Operators
+    - [ ] 9.7. Pattern Matching
+    - [ ] 9.8. Data Type Formatting Functions
+    - [ ] 9.9. Date/Time Functions and Operators
+    - [ ] 9.10. Enum Support Functions
+    - [ ] 9.11. Geometric Functions and Operators
+    - [ ] 9.12. Network Address Functions and Operators
+    - [ ] 9.13. Text Search Functions and Operators
+    - [ ] 9.14. XML Functions
+    - [ ] 9.15. JSON Functions and Operators
+    - [ ] 9.16. Sequence Manipulation Functions
+    - [ ] 9.17. Conditional Expressions
+    - [ ] 9.18. Array Functions and Operators
+    - [ ] 9.19. Range Functions and Operators
+    - [ ] 9.20. Aggregate Functions
+    - [ ] 9.21. Window Functions
+    - [ ] 9.22. Subquery Expressions
+    - [ ] 9.23. Row and Array Comparisons
+    - [ ] 9.24. Set Returning Functions
+    - [ ] 9.25. System Information Functions
+    - [ ] 9.26. System Administration Functions
+    - [ ] 9.27. Trigger Functions
+    - [ ] 9.28. Event Trigger Functions
+  - [ ] 10. Type Conversion
+    - [ ] 10.1. Overview
+    - [ ] 10.2. Operators
+    - [ ] 10.3. Functions
+    - [ ] 10.4. Value Storage
+    - [ ] 10.5. UNION, CASE, and Related Constructs
+  - [ ] 11. Indexes
+    - [ ] 11.1. Introduction
+    - [ ] 11.2. Index Types
+    - [ ] 11.3. Multicolumn Indexes
+    - [ ] 11.4. Indexes and ORDER BY
+    - [ ] 11.5. Combining Multiple Indexes
+    - [ ] 11.6. Unique Indexes
+    - [ ] 11.7. Indexes on Expressions
+    - [ ] 11.8. Partial Indexes
+    - [ ] 11.9. Operator Classes and Operator Families
+    - [ ] 11.10. Indexes and Collations
+    - [ ] 11.11. Index-Only Scans
+    - [ ] 11.12. Examining Index Usage
+  - [ ] 12. Full Text Search
+    - [ ] 12.1. Introduction
+    - [ ] 12.2. Tables and Indexes
+    - [ ] 12.3. Controlling Text Search
+    - [ ] 12.4. Additional Features
+    - [ ] 12.5. Parsers
+    - [ ] 12.6. Dictionaries
+    - [ ] 12.7. Configuration Example
+    - [ ] 12.8. Testing and Debugging Text Search
+    - [ ] 12.9. GIN and GiST Index Types
+    - [ ] 12.10. psql Support
+    - [ ] 12.11. Limitations
+    - [ ] 12.12. Migration from Pre-8.3 Text Search
+  - [ ] 13. Concurrency Control
+    - [ ] 13.1. Introduction
+    - [ ] 13.2. Transaction Isolation
+    - [ ] 13.3. Explicit Locking
+    - [ ] 13.4. Data Consistency Checks at the Application Level
+    - [ ] 13.5. Caveats
+    - [ ] 13.6. Locking and Indexes
+  - [ ] 14. Performance Tips
+    - [ ] 14.1. Using EXPLAIN
+    - [ ] 14.2. Statistics Used by the Planner
+    - [ ] 14.3. Controlling the Planner with Explicit JOIN Clauses
+    - [ ] 14.4. Populating a Database
+    - [ ] 14.5. Non-Durable Settings
+  - [ ] 15. Parallel Query
+    - [ ] 15.1. How Parallel Query Works
+    - [ ] 15.2. When Can Parallel Query Be Used?
+    - [ ] 15.3. Parallel Plans
+    - [ ] 15.4. Parallel Safety
